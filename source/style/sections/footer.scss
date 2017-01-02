@@ -1,0 +1,129 @@
+.footer {
+  margin-top: -186px;
+  position: relative;
+  @include tablet {
+    margin-top: -273px;
+  }
+  @include phone {
+    margin-top: -346px;
+  }
+
+}
+
+.footer-wrap {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.footer-top {
+  height: 148px;
+  background-color: rgba(55, 62, 66, 0.7);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 30px 0;
+  @include tablet {
+    height: 235px;
+    flex-flow: row wrap;
+  }
+  @include phone {
+    height: 288px;
+    flex-flow: column nowrap;
+  }
+}
+
+
+
+.footer-aboutsite, .footer-links {
+  @include footer {
+    @include tablet {
+      width: 50%;
+    }
+  }
+
+}
+
+.footer-quote {
+  @include footer {
+    @include tablet {
+      width: 100%;
+    }
+  }
+}
+
+.footer-aboutsite__text {
+  color: #a9acae;
+  font-family: RobotoLight;
+  font-size: 16px;
+  line-height: 25px;
+}
+
+.menu {
+  width: 100%;
+  text-align: justify;
+  &:after {
+    content: '';
+    width: 100%;
+    display: inline-block;
+  }
+}
+
+.menu__item {
+  display: inline-block;
+}
+
+.menu__link {
+  color: #fff;
+  font-family: RobotoMedium;
+  font-size: 16px;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.socials-icons__item_footer:first-child {
+  margin-left: 0;
+}
+
+.socials-icons_footer {
+  padding-top: 0;
+}
+
+footer .socials-icon__img {
+  fill: #a9acae;
+  &:hover {
+    fill: #fff;
+  }
+
+}
+
+.footer-quote__text {
+  font-family: RobotoLight;
+  font-weight: normal;
+  font-style: italic;
+  color: #a9acae;
+  line-height: 25px;
+}
+
+.footer-bottom {
+  height: 38px;
+  background-color: rgba(129, 169, 113, 0.7);
+  text-align: center;
+  @include phone {
+    height: 3.625rem;
+  }
+
+}
+
+.copyright {
+  line-height: 38px;
+  color: #fff;
+  font-family: RobotoLight;
+  font-size: 16px;
+  display: inline-block;
+  @include phone {
+    line-height: 1.81rem;
+  }
+}

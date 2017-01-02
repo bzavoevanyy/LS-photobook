@@ -1,0 +1,129 @@
+.header-traingle__right-blog, .header-traingle__left-blog {
+  fill: #F8F9F5;
+}
+
+.logo-wrapper-blog {
+  margin: auto;
+  background: none;
+  width: 100%;
+  display: block;
+}
+
+.logo-blog {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.main-title__block-blog {
+  width: 100%;
+  background: url("../img/blog_header.svg") no-repeat;
+  background-position: center 30px;
+  background-size: 20%;
+  padding-bottom: 40px;
+  height: auto;
+  & .main-title__text {
+    color: #fff;
+  }
+  & .underline {
+    fill: #fff;
+  }
+}
+
+.posts-wrap {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  background-color: #F8F9F5;
+  margin-bottom: 186px;
+  height: 100vh;
+}
+
+.posts-menu {
+  width: 30%;
+  padding: 50px;
+  @include tablet {
+    display: none;
+  }
+}
+
+.posts {
+  width: 70%;
+  padding: 50px;
+  overflow: scroll;
+  position: relative;
+  @include tablet {
+    width:100%;
+  }
+}
+
+.post {
+  &.active {
+    border-bottom: 5px solid #ecebe4;
+    & .post__title {
+      font-family: RobotoBold;
+    }
+  }
+  margin-bottom: 30px;
+}
+
+.posts-menu__link {
+  display: block;
+  line-height: 40px;
+  text-align: right;
+  padding-right: 20px;
+  text-decoration: none;
+  font-family: RobotoRegular;
+  font-size: 16px;
+  font-weight: normal;
+  color: #566358;
+  &:hover {
+    text-decoration: underline;
+  }
+  &.active {
+    border-right: 2px solid #6c9c5a;
+    font-family: RobotoBold;
+    color: #6c9c5a;
+  }
+}
+
+.post__title {
+  font-family: SansusRegular;
+  font-size: 35px;
+  font-weight: normal;
+  color: #566358;
+  margin-bottom: 20px;
+
+}
+
+.post__date {
+  font-family: RobotoRegular;
+  font-size: 16px;
+  font-weight: normal;
+  color: #4e8839;
+  margin-bottom: 30px;
+}
+
+.post__text {
+  font-family: RobotoRegular;
+  font-size: 16px;
+  line-height: 28px;
+  color: #566358;
+  & p {
+    margin-bottom: 20px;
+  }
+}
+
+.post__picture {
+
+  margin-bottom: 27px;
+  width:100%;
+}
+
+.footer-top.footer-top-blog {
+  background-color: #545a5c;
+}
+
+.footer-bottom.footer-bottom-blog {
+  background-color: #81aa70;
+}

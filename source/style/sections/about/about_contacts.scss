@@ -1,0 +1,51 @@
+.contacts {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  @include phone {
+    height: 1143px;
+    align-items: flex-start;
+  }
+}
+.contacts-links {
+  width:380px;
+  border-radius: 10px;
+  opacity: 0.9;
+  margin-top: -186px;
+  overflow: hidden;
+  @include phone {
+    margin-top: 0;
+  }
+}
+.contacts-links-title {
+  width:auto;
+}
+.contancts-linkwrap {
+  text-align: left;
+  width: 80%;
+  margin-bottom: 40px;
+  margin-left: 40px;
+}
+.contacts__link {
+  font-family: RobotoMedium;
+  font-size: 16px;
+  font-weight: normal;
+  text-decoration: none;
+  color: #455a64;
+  line-height: 36px;
+  display: block;
+
+}
+.contacts__icon {
+  margin-right: 10px;
+  color: #6c9c5a;
+}
+.map {
+  position: absolute;
+  top:0;
+  left:0;
+  right: 0;
+  bottom: 0;
+}

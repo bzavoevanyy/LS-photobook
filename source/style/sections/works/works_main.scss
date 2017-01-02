@@ -1,0 +1,275 @@
+.main-wrap {
+  position: relative;
+}
+
+.main {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.main-title {
+  height: 185px;
+  background-color: #f8f9f5;
+  width: 100%;
+}
+
+.main-title__block {
+  height: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: url("../img/works_header.svg") no-repeat;
+  background-position: center;
+  text-align: center;
+  @include phone {
+    background-size: 100%;
+  }
+}
+
+.underline {
+  height: 3px;
+  width: 90px;
+  fill: #373e42;
+  margin-bottom: 35px;
+}
+
+.underline-desc {
+  fill: #556338;
+}
+
+.main-title__text {
+  font-family: SansusRegular;
+  font-size: 63px;
+  color: #373e42;
+  margin-top: 70px;
+  font-weight: normal;
+}
+
+.main-content {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-end;
+  height: 100vh;
+  min-height: 650px;
+  @include tablet {
+    flex-flow: column nowrap;
+  }
+}
+
+.content-disc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: #ebefe2;
+  @include tablet {
+    width: 100%;
+  }
+}
+
+.content-disc__title {
+  font-family: SansusRegular;
+  font-size: 35px;
+  color: #556338;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: normal;
+  @include tablet {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+  }
+}
+
+.content-disc__skills {
+  font-family: RobotoMedium;
+  font-size: 16px;
+  color: #6c9c5a;
+  margin-bottom: 55px;
+  @include tablet {
+    margin-bottom: 15px;
+  }
+}
+
+.content-disc__linkblock {
+  height: 45px;
+  width: 200px;
+}
+
+.button {
+  padding-right: 17px;
+  padding-left: 17px;
+  display: block;
+  border-radius: 20px;
+  background-color: #6c9c5a;
+  text-align: right;
+  &:hover {
+    background-color: #4e8839;
+  }
+}
+
+.content-disc__icon {
+  height: 21px;
+  width: 21px;
+  fill: #fff;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.content-disc__text {
+  display: inline-block;
+  text-decoration: none;
+  font-family: RobotoMedium;
+  font-size: 16px;
+  color: #fff;
+  line-height: 45px;
+  margin-left: 8px;
+}
+
+.content-view {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  @include phone {
+    width: 100%;
+  }
+}
+
+.view-focus {
+  width: 50%;
+  height: 70%;
+  //display: flex;
+  background-color: #e1e4d7;
+  position: relative;
+  @include tablet {
+    height: 45.2%;
+    order: -1;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  @include phone {
+    height: 45.2%;
+    order: -1;
+    width: 100%;
+  }
+}
+
+.view-focus__img {
+  max-width: 460px;
+  max-height: 310px;
+  //margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  @include tablet {
+    width: 73%;
+  }
+}
+
+.pre-view {
+  width: 50%;
+  height: 30%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  @include tablet {
+    width: 100%;
+  }
+}
+
+.view-left, .view-right {
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+
+}
+
+.view-small__img {
+  max-width: 280px;
+  max-height: 190px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  @include tablet {
+    max-width: 73%;
+  }
+}
+
+.view-small__fill {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #566358;
+  opacity: 0.5;
+  display: flex;
+  z-index: 10;
+}
+
+.view-small__fill-dark {
+  opacity: 0.6;
+}
+
+.view-left__arrow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 30px;
+  width: 45px;
+  fill: #fff;
+  margin: auto;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.view-focus {
+  & .view-focus__img2, .view-focus__img3, .view-focus__img4 {
+    opacity: 0;
+  }
+}
+.view-small__block-left {
+
+}
+.view-small__img1, .view-small__img2, .view-small__img3, .view-small__img4 {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: top 0.5s;
+
+}
+
+.view-left {
+  & .view-small__img1, .view-small__img2, .view-small__img3 {
+    top: -100%;
+  }
+}
+
+.view-focus__img1, .view-focus__img2, .view-focus__img3, .view-focus__img4 {
+  transition: opacity 0.4s;
+
+}
+
+.view-right {
+  & .view-small__img1, .view-small__img3, .view-small__img4 {
+    top: 100%;
+  }
+}

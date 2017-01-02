@@ -1,0 +1,127 @@
+.main-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  z-index: 100;
+  display: none;
+}
+.main-menu.show-menu {
+  display: flex;
+}
+.main-menu .close-icon {
+  position: absolute;
+  right:30px;
+  top:33px;
+  z-index: 10;
+  color:#fff;
+  cursor: pointer;
+  display: none;
+  transition: display 1s;
+}
+.main-menu.show-menu  .close-icon {
+  display: block;
+}
+.back-wrap {
+  position: absolute;
+  top:0;
+  left:0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+.main-menu__left,  .main-menu__right {
+  width:0;
+  background-color: rgba(108, 156, 90, 0.6);
+  //transition: width 0.5s;
+}
+@keyframes showPanels {
+  to {
+    width:50%;
+
+  }
+}
+.show-menu {
+  & .main-menu__left,  .main-menu__right {
+    animation: showPanels 0.5s;
+    animation-fill-mode: forwards;
+  }
+}
+.main-menu__list {
+  margin: auto;
+  z-index: 1;
+}
+
+.main-menu__item {
+  margin-bottom: 80px;
+  &:first-child {
+    margin-top: 80px;
+  }
+}
+
+.main-menu__link {
+  color: #fff;
+  font-family: SansusRegular;
+  font-size: 0px;
+  text-decoration: none;
+  display: block;
+  width: 400px;
+  text-align: center;
+  &:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 89px;
+  }
+
+}
+.show-menu .main-menu__link--works {
+  animation: showlinks 0.2s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+.show-menu .main-menu__link--about {
+  animation: showlinks 0.2s;
+  animation-delay: 0.7s;
+  animation-fill-mode: forwards;
+}
+.show-menu .main-menu__link--blog {
+  animation: showlinks 0.2s;
+  animation-delay: 0.9s;
+  animation-fill-mode: forwards;
+}
+.show-menu .main-menu__link--index {
+  animation: showlinks 0.2s;
+  animation-delay: 1.1s;
+  animation-fill-mode: forwards;
+}
+@keyframes showlinks {
+  0% {
+    font-size : 0;
+  }
+  90% {
+    font-size: 65px;
+  }
+  100% {
+    font-size: 63px;
+  }
+}
+.underline.underline__mainmenu {
+  display: none;
+  margin-bottom: 0;
+  fill: #fff;
+  margin: 0 auto;
+}
+
+.main-menu__link:hover {
+  &:after {
+    display: none;
+  }
+  & .underline__mainmenu {
+    display: block;
+  }
+}

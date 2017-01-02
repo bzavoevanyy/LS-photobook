@@ -1,0 +1,169 @@
+header {
+  position: relative;
+
+}
+
+.header-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  height: 100vh;
+  min-height: 650px;
+
+  @include tablet {
+    min-height: 558px;
+  }
+  @include phone {
+    min-height: 558px;
+  }
+
+}
+.background-static {
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../img/water.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -2;
+}
+.Background {
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.dark-block {
+  position: absolute;
+  width: 100%;
+  height: 230px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(58, 58, 58, 0));
+  z-index: 1;
+}
+
+.top-container {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 50px;
+  z-index: 2;
+}
+
+.mainmenu {
+  margin-left: auto;
+  padding-top: 33px;
+  margin-right: 30px;
+}
+
+.socials-icons {
+  padding-top: 33px;
+}
+
+.socials-icons__item {
+  display: inline-block;
+  margin-left: 20px;
+  &:first-child {
+    margin-left: 30px;
+  }
+}
+
+.socials-icon__img {
+  width: 35px;
+  height: 20px;
+  fill: #fff;
+  z-index: 200;
+  &:hover {
+    fill: #4e8839;
+  }
+}
+
+.mainmenu .socials-icon__img {
+  width: 45px;
+  height: 45px;
+  color: #fff;
+  cursor: pointer;
+  &:hover {
+    color:#4e8839;
+  }
+}
+
+.logo-wrapper {
+  display: flex;
+  justify-content: center;
+  background: url("../img/portfolio_header.svg") no-repeat;
+  background-position: center center;
+  height: 330px;
+
+  @include tablet {
+    background: none;
+  }
+  @include phone {
+    background: none;
+  }
+
+}
+
+.logo {
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-img {
+  width: 142px;
+  height: 142px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.logo-img__item {
+  height: 213px;
+  margin-left: -45px;
+  margin-top: -15px;
+}
+
+.logo__text {
+  font-size: 30px;
+  color: #fff;
+  font-family: RobotoMedium;
+  line-height: 45px;
+  font-weight: normal;
+}
+
+.logo__subtext {
+  font-size: 16px;
+  color: #fff;
+  font-family: RobotoRegular;
+  line-height: 25px;
+  font-weight: normal;
+}
+
+.logo-background {
+  position: absolute;
+  top: 100px;
+  left: 135px;
+  opacity: 0.15;
+  z-index: -1;
+}
+
+.socials-icon__img-arrow_down {
+  fill: #c4d5cc;
+  align-self: center;
+  margin-bottom: -115px;
+  cursor: pointer;
+}
+
+.header-traingle {
+  height: 100px;
+}
+
+.header-traingle__left, .header-traingle__right {
+  fill: #f8f9f5;
+}

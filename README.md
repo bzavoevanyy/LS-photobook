@@ -1,4 +1,4 @@
-#Сборка gulp, webpack, pug, scss
+#LS-photobook - Выпускной проект №2 Группа 3
 
 
 Stack:

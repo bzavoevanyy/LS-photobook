@@ -13,7 +13,6 @@ module.exports = function () {
       .pipe($.gp.sourcemaps.write())
       .pipe($.gulp.dest($.config.root + '/assets/css'))
       .pipe($.browserSync.stream())
-      .pipe($.gulp.src('./source/style/layout.scss'))
       .pipe($.gp.sass()).on('error', $.gp.notify.onError({title: 'Style'}))
       .pipe($.gp.autoprefixer({browsers: $.config.autoprefixerConfig}))
       .pipe($.gp.sourcemaps.write())

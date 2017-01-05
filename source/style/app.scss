@@ -1,6 +1,9 @@
 @import "layout/_mixins";
-
-@import 'layout/fonts';
-
-@import "FontAwesome/font-awesome";
-
+@import 'layout/_fonts';
+@import 'layout/_adjustment';
+@import 'modal-windows/_modal-windows';
+@import 'modal-windows/_add-photo';
+@import 'modal-windows/_notification';
+@import 'modal-windows/_edit-photo-delete';
+@import 'modal-windows/_edit-photo';
+@import 'modal-windows/_edit-album-modal';

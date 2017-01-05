@@ -1,0 +1,49 @@
+.edit-photo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  min-height: 260px;
+  padding: 38px 16px 38px 55px;
+
+  &__name, &__desc {
+    display: flex;
+  }
+
+  &__name {
+    align-items: center;
+    margin-bottom: 19px;
+
+    &-textarea {
+      width: 512px;
+      resize: none;
+      border: 1px solid #d6d6d6;
+      border-radius: 18px;
+      padding: 9px 20px 0;
+      overflow: hidden;
+      font-weight: 500;
+      line-height: 21px;
+
+      &:focus {
+        border-color: #2abceb;
+      }
+
+      &_name {
+       min-height: 40px;
+      }
+
+      &_desc {
+        min-height: 120px;
+      }
+    }
+  }
+
+  .modal__desc_edit-photo {
+    margin-top: 10px;
+  }
+
+  &-desc {
+    min-height: 120px;
+  }
+}
+

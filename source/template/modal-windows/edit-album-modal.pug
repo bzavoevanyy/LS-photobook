@@ -1,0 +1,41 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        meta(content="width=device-width, initial-scale=1" name="viewport")
+        meta(content="ie=edge" http-equiv="x-ua-compatible")
+        title Обо мне
+
+        link(rel='stylesheet' href='assets/css/foundation.css')
+        link(rel='stylesheet' href='assets/css/app.css')
+
+        <!--[if lt IE 9]>
+        script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
+        <![endif]-->
+    body
+        .modal__window
+            .modal__header
+                .modal__title Добавить альбом
+                .modal__close
+                    span.modal__close-top
+                    span.modal__close-bottom
+            .edit-photo.edit-album.modal__main
+                .edit-photo__name
+                    .modal__desc.modal__desc_album Название
+                    textarea(rows=1 placeholder="Мой альбом").edit-photo__name-textarea.edit-photo__name-textarea_name
+                .edit-photo__desc.edit-album__desc
+                    .modal__desc.modal__desc_edit-photo.modal__desc_album Описание
+                    textarea(placeholder="Как я провёл лето. Чтобы было красиво описание должно быть на несколько строк. Убедитесь сами!").edit-photo__name-textarea.edit-photo__name-textarea_desc
+                .edit-album__upload-cover
+                    .edit-album__small-cover
+                        img(src="#").edit-album__image
+                    .edit-album__btn.btn Загрузить обложку
+                    .edit-album__note (файл должен быть размером не более 1024 КБ)
+            .modal__footer
+                .modal__footer-left
+                    .btn.btn_save Сохранить
+                    .modal__cancel Отменить
+                .modal__footer-right
+                    .btn.btn_delete Удалить
+                        svg.btn-delete__image
+                            use(xlink:href="assets/img/sprite.svg#delete")

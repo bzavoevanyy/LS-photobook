@@ -1,0 +1,146 @@
+.modal {
+
+  &__window {
+    width: 680px;
+    border-radius: 4px;
+    box-shadow: 1px 0 2px #c4c4c4;
+    overflow: hidden;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    height: 67px;
+    padding: 20px 18px;
+    background: #f1f1f1;
+  }
+
+  &__title {
+    font-size: 21px;
+    line-height: 21px;
+    font-family: Panton;
+    font-weight: 700;
+    color: #323232;
+  }
+
+  &__close {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+
+    &:hover {
+      .modal__close-top, .modal__close-bottom {
+        background: #323232;
+      }
+    }
+
+    &-top, &-bottom {
+      right: 0;
+      position: absolute;
+      width: 36px;
+      height: 6px;
+      border-radius: 5px;
+      background: #a0a09f;
+    }
+
+    &-top {
+      transform: translateY(7px) translateX(0) rotate(45deg);
+    }
+
+    &-bottom {
+      top: 15px;
+      transform: translateY(-8px) translateX(0) rotate(-45deg);
+    }
+  }
+
+  &__main {
+    background: #fff;
+    font-size: 16px;
+    line-height: 21px;
+    font-family: ProximaNova;
+  }
+
+  &__desc {
+    font-size: 16px;
+    line-height: 21px;
+    font-family: ProximaNova;
+    font-weight: 600;
+    color: #323232;
+    margin-right: 20px;
+  }
+
+  &__text {
+    font-weight: 300;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 67px;
+    padding: 14px 20px 13px;
+    background: #f1f1f1;
+
+    &-left {
+      display: flex;
+      align-items: center;
+      width: 330px;
+    }
+  }
+
+  &__cancel {
+    font-size: 16px;
+    line-height: 21px;
+    font-family: ProximaNova;
+    font-weight: 600;
+    color: #28bbf0;
+    cursor: pointer;
+    opacity: 0.8;
+
+    &:hover {
+      color: #20b6ed;
+    }
+  }
+}
+
+.btn {
+  height: 40px;
+  font-size: 14px;
+  line-height: 21px;
+  font-family: Panton;
+  font-weight: 700;
+  padding: 8px 20px 9px;
+  border-radius: 20px;
+  cursor: pointer;
+
+  &_save {
+    color: #fff;
+    background: #28bbf0;
+    margin-right: 20px;
+
+    &:hover {
+      background: #20b6ed;
+    }
+  }
+
+  &_delete {
+    position: relative;
+    color: rgba(255, 255, 255, 0.8);
+    background: #ee4634;
+    padding-left: 42px;
+
+    &:hover {
+      background: #d94130;
+    }
+  }
+
+  &-delete__image {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 12px;
+    height: 16px;
+    fill: #fff;
+  }
+}

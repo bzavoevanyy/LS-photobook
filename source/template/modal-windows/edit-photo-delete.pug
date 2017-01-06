@@ -16,9 +16,8 @@ html
         .modal__window
             .modal__header
                 .modal__title Редактировать фотографию
-                .modal__close
-                    span.modal__close-top
-                    span.modal__close-bottom
+                svg.modal__close
+                    use(xlink:href="assets/img/sprite.svg#close")
             .edit-photo-delete.modal__main
                 .edit-photo-delete__question Вы хотите удалить это фото?
                 .edit-photo-delete__answer

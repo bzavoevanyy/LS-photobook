@@ -16,20 +16,41 @@ html
         .add-photo.modal__window
             .modal__header
                 .modal__title Добавить фотографии
-                .modal__close
-                    span.modal__close-top
-                    span.modal__close-bottom
+                svg.modal__close
+                    use(xlink:href="assets/img/sprite.svg#close")
             .add-photo__main.modal__main
                 .add-photo__main-header
                     .add-photo__title.modal__desc Название
                     .add-photo__name.modal__text Как я провёл лето
-                .add-photo__add-field
-                    .add-field__icon
-                        svg.add-field__image
-                            use(xlink:href="assets/img/sprite.svg#cam")
-                    .add-field__desc
-                        | Перетащите фото сюда или
-                        span.add-field__file  выберите файл
+                .add-photo__add-field_added-photo
+                    .add-photo__photo(style="background-image: url('assets/img/photo/test-photo.jpg')")
+                        .add-photo__delete-btn
+                            svg.add-photo__delete-cross
+                                use(xlink:href="assets/img/sprite.svg#close")
+                    .add-photo__photo(style="background-image: url('assets/img/photo/test-photo.jpg')")
+                        .add-photo__delete-btn
+                            svg.add-photo__delete-cross
+                                use(xlink:href="assets/img/sprite.svg#close")
+                    .add-photo__photo(style="background-image: url('assets/img/photo/test-photo.jpg')")
+                        .add-photo__delete-btn
+                            svg.add-photo__delete-cross
+                                use(xlink:href="assets/img/sprite.svg#close")
+                    .add-photo__photo(style="background-image: url('assets/img/photo/test-photo.jpg')")
+                        .add-photo__delete-btn
+                            svg.add-photo__delete-cross
+                                use(xlink:href="assets/img/sprite.svg#close")
+                    .add-photo__photo(style="background-image: url('assets/img/photo/test-photo.jpg')")
+                        .add-photo__delete-btn
+                            svg.add-photo__delete-cross
+                                use(xlink:href="assets/img/sprite.svg#close")
+                    .add-photo__photo(style="background-image: url('assets/img/photo/test-photo.jpg')")
+                        .add-photo__delete-btn
+                            svg.add-photo__delete-cross
+                                use(xlink:href="assets/img/sprite.svg#close")
+                    .add-photo__photo(style="background-image: url('assets/img/photo/test-photo.jpg')")
+                        .add-photo__delete-btn
+                            svg.add-photo__delete-cross
+                                use(xlink:href="assets/img/sprite.svg#close")
                 .add-photo__error Выбран неверный формат изображения. Попробуйте снова
             .modal__footer
                 .modal__footer-left

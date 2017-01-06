@@ -1,0 +1,63 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        meta(content="width=device-width, initial-scale=1" name="viewport")
+        meta(content="ie=edge" http-equiv="x-ua-compatible")
+        title Обо мне
+
+        link(rel='stylesheet' href='assets/css/foundation.css')
+        link(rel='stylesheet' href='assets/css/app.css')
+
+        <!--[if lt IE 9]>
+        script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
+        <![endif]-->
+    body
+        .wrapper
+            .modal__window.big-photo-modal
+                .big-photo(style="background-image: url('assets/img/photo/test-photo-2.jpg')")
+                svg.modal__close.modal__close_big-photo
+                    use(xlink:href="assets/img/sprite.svg#close")
+                svg.big-photo-modal__left
+                    use(xlink:href="assets/img/sprite.svg#arrow_left")
+                svg.big-photo-modal__right
+                    use(xlink:href="assets/img/sprite.svg#arrow_right")
+                .big-photo-modal__desc
+                    .big-photo-modal__header
+                        .big-photo-modal__header-left
+                            .cover-small
+                                img(src="#").cover-image
+                            .username-author.modal__desc Анна Богданова
+                        .big-photo-modal__header-right
+                            .like-btn.like-btn_liked.btn 16
+                                svg.like-heart
+                                    use(xlink:href="assets/img/sprite.svg#heart")
+                                svg.like-liked
+                                    use(xlink:href="assets/img/sprite.svg#like")
+                    .big-photo-modal__title Путешествие на речном трамвайчике
+                    .big-photo-modal__text
+                        | Мы отправились в
+                        span.hashtag  #путешествие
+                        |  2 дня назад, но уже сейчас такое ощущение, что мы посмотрели целый новый мир. Далее будет ещё одно описательное предложение. Возможно оно будет также с
+                        span.hashtag  #тегами.
+                .big-photo-modal__comments
+                    .big-photo-modal__add-comment
+                        .big-photo-modal__comments-header
+                            .big-photo-modal__comments-title Комментарии
+                            svg.big-photo-modal__comments-arrow
+                                use(xlink:href="assets/img/sprite.svg#arrow_left")
+                        .big-photo-modal__comments-add
+                            .big-photo-modal__comments__left
+                                .cover-small
+                                    img(src="#").cover-image
+                            .big-photo-modal__comments__right
+                                .username-author.modal__desc.username-author-comments Антон Черепов
+                                textarea(rows=1 placeholder="Добавить комментарий").edit__name-textarea.edit__name-textarea_comments
+                                .btn.btn_close Добавить
+                        .big-photo-modal__comments-added
+                            .big-photo-modal__comments__left
+                                .cover-small
+                                    img(src="#").cover-image
+                            .big-photo-modal__comments__right
+                                .username-author.modal__desc.username-author-comments Виталий Виноградов
+                                    .big-photo-modal__comments-added-text Комментарий

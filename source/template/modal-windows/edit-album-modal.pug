@@ -16,21 +16,20 @@ html
         .modal__window
             .modal__header
                 .modal__title Добавить альбом
-                .modal__close
-                    span.modal__close-top
-                    span.modal__close-bottom
-            .edit-photo.edit-album.modal__main
-                .edit-photo__name
+                svg.modal__close
+                    use(xlink:href="assets/img/sprite.svg#close")
+            .edit.edit_album.modal__main
+                .edit__name
                     .modal__desc.modal__desc_album Название
-                    textarea(rows=1 placeholder="Мой альбом").edit-photo__name-textarea.edit-photo__name-textarea_name
-                .edit-photo__desc.edit-album__desc
+                    textarea(rows=1 placeholder="Мой альбом").edit__name-textarea.edit__name-textarea_name
+                .edit__desc.edit_album__desc
                     .modal__desc.modal__desc_edit-photo.modal__desc_album Описание
-                    textarea(placeholder="Как я провёл лето. Чтобы было красиво описание должно быть на несколько строк. Убедитесь сами!").edit-photo__name-textarea.edit-photo__name-textarea_desc
-                .edit-album__upload-cover
-                    .edit-album__small-cover
-                        img(src="#").edit-album__image
-                    .edit-album__btn.btn Загрузить обложку
-                    .edit-album__note (файл должен быть размером не более 1024 КБ)
+                    textarea(placeholder="Как я провёл лето. Чтобы было красиво описание должно быть на несколько строк. Убедитесь сами!").edit__name-textarea.edit__name-textarea_desc
+                .edit__upload-cover
+                    .cover-small
+                        img(src="#").cover-image
+                    .edit__upload-cover-btn.btn Загрузить обложку
+                    .edit__upload-cover-note (файл должен быть размером не более 1024 КБ)
             .modal__footer
                 .modal__footer-left
                     .btn.btn_save Сохранить

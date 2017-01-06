@@ -16,16 +16,15 @@ html
         .modal__window
             .modal__header
                 .modal__title Редактировать фотографию
-                .modal__close
-                    span.modal__close-top
-                    span.modal__close-bottom
-            .edit-photo.modal__main
-                .edit-photo-name
+                svg.modal__close
+                    use(xlink:href="assets/img/sprite.svg#close")
+            .edit.modal__main
+                .edit__name
                     .modal__desc Название
-                    textarea(placeholder="Домик в лесу").edit-photo-name__textarea.edit-photo-name__textarea_name
-                .edit-photo-desc
+                    textarea(placeholder="Домик в лесу").edit__name-textarea.edit__name-textarea_name
+                .edit__desc
                     .modal__desc.modal__desc_edit-photo Описание
-                    textarea(placeholder="Описание фотографии может быть с #хештегами. Чтобы было красиво описание должно быть на несколько строк. Убедитесь сами!").edit-photo-name__textarea.edit-photo-name__textarea_desc
+                    textarea(placeholder="Описание фотографии может быть с #хештегами. Чтобы было красиво описание должно быть на несколько строк. Убедитесь сами!").edit__name-textarea.edit__name-textarea_desc
             .modal__footer
                 .modal__footer-left
                     .btn.btn_save Сохранить

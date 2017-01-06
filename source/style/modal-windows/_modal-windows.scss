@@ -24,33 +24,13 @@
   }
 
   &__close {
-    position: relative;
-    width: 30px;
-    height: 30px;
+    width: 27px;
+    height: 26px;
+    fill: #a0a09f;
     cursor: pointer;
 
     &:hover {
-      .modal__close-top, .modal__close-bottom {
-        background: #323232;
-      }
-    }
-
-    &-top, &-bottom {
-      right: 0;
-      position: absolute;
-      width: 36px;
-      height: 6px;
-      border-radius: 5px;
-      background: #a0a09f;
-    }
-
-    &-top {
-      transform: translateY(7px) translateX(0) rotate(45deg);
-    }
-
-    &-bottom {
-      top: 15px;
-      transform: translateY(-8px) translateX(0) rotate(-45deg);
+      fill: #323232;
     }
   }
 
@@ -101,6 +81,15 @@
     &:hover {
       color: #20b6ed;
     }
+  }
+}
+
+.hashtag {
+  color: #64cbf6;
+  cursor: pointer;
+
+  &:hover {
+    color: #67caf3;
   }
 }
 

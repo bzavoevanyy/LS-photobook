@@ -1,0 +1,44 @@
+.edit_profile {
+  min-height: 645px;
+}
+
+.edit__name-textarea_profile {
+  min-height: 40px;
+  width: 246px;
+
+  &_first {
+    margin-right: 20px;
+  }
+}
+
+.edit__upload-cover_profile {
+  margin-bottom: 5px;
+
+  &-bottom {
+    margin-bottom: 25px;
+  }
+}
+
+.horizontal-line-profile {
+  width: 680px;
+  height: 1px;
+  background: #d6d6d6;
+  margin-bottom: 40px;
+}
+
+.edit__profile-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.edit__name_profile-links {
+  margin-bottom: 8px;
+}
+
+.modal__desc_profile-links {
+  text-align: right;
+  min-width: 80px;
+}

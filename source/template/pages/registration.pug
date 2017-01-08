@@ -1,0 +1,39 @@
+extends ../_template
+
+block variables
+    - var title = 'Registration'
+
+
+block content
+    include ../commons/index/index_content
+        .wrapper
+            .login
+                .content
+                    .login__top
+                        .flip-container
+                                    h2.login__title Регистрация
+                                    form(action="#" method="POST" class="form")
+                                        .form-block
+                                            .svg-wrap
+                                                svg(role="img" class="svg")
+                                                    use( xlink:href="/assets/img/sprite.svg#name")
+                                            input(type="text" class="info" placeholder="Имя")
+                                        .form-block
+                                            .svg-wrap
+                                                svg(role="img" class="svg")
+                                                    use( xlink:href="/assets/img/sprite.svg#envelope")
+                                            input(type="text" class="info" placeholder="Электронная почта")
+                                        .form-block
+                                            .svg-wrap
+                                                svg(role="img" class="svg")
+                                                    use( xlink:href="/assets/img/sprite.svg#password")
+                                            input(type="text" class="info" placeholder="Пароль")
+                                        div(class='form-block height')
+                                            .form-block__text Ваши данные остаются строго конфеденциальны
+                                        .form-block
+                                            input(type="submit" class='button' value="Создать аккаунт")
+                                        .form-block
+                                            .form-block__text Уже зарегистрированы?
+                                            a(href='photo_main.html' class='form-link') Войти
+                    .login__down
+                        .login__down-text 2017 Создано командой профессионалов на продвинутом курсе по веб-разработке от LoftSchool

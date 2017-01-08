@@ -1,0 +1,127 @@
+extends ../_template
+
+block variables
+    - var title = 'User'
+
+
+block content
+    include ../commons/index/index_content
+    .wrapper
+        .header
+            .header-top
+                .content
+                    .header-container
+                        .user
+                            .user__avatar
+                                .user__avatar-img(style="background-image:url('/assets/img/user.jpg');")
+                                    img.avatar-pic(src="/assets/img/user.jpg" alt="")
+                            .user__inf
+                                .user__name Фамилия Имя
+                                .user__text Я веб разработчик. Мне 24 года. Люблю путешествия, кодинг, фриланс и актвный отдых.
+                                ul.user__icons-list
+                                    li.user__icons-item
+                                        a(href='#').user__icons-link
+                                            svg(role="img" class="svg")
+                                                use( xlink:href="/assets/img/sprite.svg#soc_vk")
+                                    li.user__icons-item
+                                        a(href='#').user__icons-link
+                                            svg(role="img" class="svg" )
+                                                use( xlink:href="/assets/img/sprite.svg#soc_fb")
+                                    li.user__icons-item
+                                        a(href='#').user__icons-link
+                                            svg(role="img" class="svg" )
+                                                use( xlink:href="/assets/img/sprite.svg#soc_twitter")
+                                    li.user__icons-item
+                                        a(href='#').user__icons-link
+                                            svg(role="img" class="svg")
+                                                use( xlink:href="/assets/img/sprite.svg#social_google")
+                                    li.user__icons-item
+                                        a(href='#').user__icons-link
+                                            svg(role="img" class="svg")
+                                                use( xlink:href="/assets/img/sprite.svg#soc_email")
+                        .edit
+                             a(href='photo_main.html' class='home-wrap')
+                                .svg-wrap
+                                    svg(role="img" class="svg")
+                                        use( xlink:href="/assets/img/sprite.svg#home")
+                                .home-hover
+            .header-down
+                .content-down
+                    .search
+                        .svg-wrap
+                            svg(role="img" class="svg")
+                                use( xlink:href="/assets/img/sprite.svg#search")
+                        input(type="text" class="search-input" placeholder="Исследовать мир")
+
+        section.myalbum
+            .content
+                .noalbum
+                    .noalbum-text Здесь еще нет ни одного альбома
+                h2.myalbum__title Альбомы
+                .myalbum__container
+                    ul.myalbum__list
+                        li.myalbum__item
+                            .myalbum__top
+                                .myalbum__top-hover
+                                    a.hover-link
+                            .myalbum__down
+                                div(class="album__name user")
+                                    a(href="#")
+                                        .album__name-text Горы
+                        li.myalbum__item
+                            .myalbum__top
+                                .myalbum__top-hover
+                                    a.hover-link
+                            .myalbum__down
+                                div(class="album__name user")
+                                    a(href="#")
+                                        .album__name-text Горы
+                        li.myalbum__item
+                            .myalbum__top
+                                .myalbum__top-hover
+                                    a.hover-link
+                            .myalbum__down
+                                div(class="album__name user")
+                                    a(href="#")
+                                        .album__name-text Горы
+                        li.myalbum__item
+                            .myalbum__top
+                                .myalbum__top-hover
+                                    a.hover-link
+                            .myalbum__down
+                                div(class="album__name user")
+                                    a(href="#")
+                                        .album__name-text Горы
+                        li.myalbum__item
+                            .myalbum__top
+                                .myalbum__top-hover
+                                    a.hover-link
+                            .myalbum__down
+                                div(class="album__name user")
+                                    a(href="#")
+                                        .album__name-text Горы
+                        li.myalbum__item
+                            .myalbum__top
+                                .myalbum__top-hover
+                                    a.hover-link
+                            .myalbum__down
+                                div(class="album__name user")
+                                    a(href="#")
+                                        .album__name-text Горы
+
+        .footer
+            .footer-overlay
+                .content
+                    .footer-wrap
+                        .footer-block
+                            .footer-text Перед вами сервис ,который поможет вам организовать свои фотографии в альбом и поделиться ими со всем миром
+                        .footer-block
+                            a(href="").footer-arrow
+                                .svg-wrap
+                                    svg(role="img" class="svg")
+                                        use( xlink:href="/assets/img/sprite.svg#top")
+                        .footer-block
+                            .footer-autors 2017  Создано командой профессионалов на продвинутом курсе по веб-разработке в LoftSchool
+
+
+

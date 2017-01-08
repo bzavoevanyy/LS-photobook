@@ -1,0 +1,173 @@
+
+.login{
+  width: 100%;
+  height: 100vh;
+  background: url('/assets/img/bg.jpg') 50% no-repeat;
+background-size: cover;
+}
+.login__top{
+  width: 100%;
+  height: 95%;
+}
+.login__down{
+  height: 5%;
+  width: 100%;
+  bottom: 0;
+}
+.login__down-text{
+  color:#fff;
+  text-align: center;
+}
+.form{
+  width: 290px;
+ flex-flow: column wrap;
+  background: #fff;
+  border-radius: 10%;
+  display: flex;
+  box-sizing: border-box;
+  flex:1;
+  margin: 0 auto;
+  font-size: 14px;
+}
+.form-block{
+  display: flex;
+  flex:1;
+  height: 43px;
+  width: 100%;
+  position: relative;
+
+}
+.form-block:nth-child(1){
+  border-bottom: 1px #cdcdcd solid;
+}
+.form-block:nth-child(2){
+  border-bottom: 1px #cdcdcd solid;
+}
+.form-block:nth-child(3){
+  border-bottom: 1px #cdcdcd solid;
+}
+.form-block.exept{
+  border-bottom: none;
+}
+.info{
+  display: flex;
+  border: none;
+  outline:none;
+}
+
+.form-link__text{
+  color:#28bbef;
+  margin-left:20px;
+  margin-top: 10px;
+}
+.form-block.error{
+  display: none;
+}
+.error__wrap{
+background:#ffe3e3;
+  width: 240px;
+  height: 30px;
+  margin:0 auto;
+}
+.error__text{
+  color:#cdcdcd;
+}
+
+.button{
+background:#28bbef;
+  color: #fff;
+  height: 43px;
+  width: 240px;
+  margin: 0 auto;
+  display: block;
+  border: 1px solid #fff;
+  border-radius: 23px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+.form-block__text{
+  margin: 10px 20px 10px;
+}
+.form-link{
+text-decoration: none;
+  font-family: 'Panton-Bold';
+  color: #28bbef;
+  margin: 10px 5px;
+}
+.login__title{
+  color: #fff;
+  width: 100%;
+  font-family: 'Panton-Bold';
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.login__text{
+  color:#fff;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 35px;
+}
+.flip-container {
+  perspective: 1000px;
+  margin: 0 auto;
+  width:565px;
+  height: 365px;
+  position: relative;
+  top:50%;
+  transform:translateY(-50%);
+
+
+}
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+  transform: rotateY(0deg);
+}
+
+.flip-container, .front, .back {
+  width: 565px;
+  height: 365px;
+}
+
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+
+  position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+  backface-visibility: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+  transform: rotateY(180deg);
+}
+.svg-wrap{
+  width: 40px;
+  height: 100%;
+  text-align: center;
+  margin-left: 20px;
+  .svg{
+    position: relative;
+    top:30%;
+    width: 15px;
+    height: 15px;
+    fill:#cdcdcd;
+  }
+}

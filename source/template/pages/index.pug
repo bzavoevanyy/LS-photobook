@@ -1,0 +1,66 @@
+extends ../_template
+
+block variables
+  - var title = 'Index'
+
+
+block content
+  include ../commons/index/index_content
+    .wrapper
+      .login
+        .content
+          .login__top
+            .flip-container
+              .flipper
+                .front
+                  h2.login__title Добро пожаловать
+                  .login__text Перед вами сервис , который поможет организовать вам свои фотографии в альбомы и поделиься ими со всем миром
+                  form(action="#" method="POST" class="form")
+                    .form-block
+                      .svg-wrap
+                         svg(role="img" class="svg")
+                            use( xlink:href="/assets/img/sprite.svg#envelope")
+                      input(type="text" class="info" placeholder="Электронная почта")
+                    .form-block
+                      .svg-wrap
+                         svg(role="img" class="svg")
+                           use( xlink:href="/assets/img/sprite.svg#password")
+                      input(type="text" class="info" placeholder="Пароль")
+                    div(class='form-block exept')
+                      a(href='forget.html' class="form-link")
+                         .form-link__text Забыли пароль?
+                    div(class='form-block error')
+                        .error__wrap
+                          .error__text Email или пароль неверен
+                    .form-block
+                      input(type="submit" class='button' value="Войти")
+                    .form-block
+                       .form-block__text Нет аккаунта?
+                       a(href='registration.html' class='form-link') Зарегистрирваться
+                .back
+                  h2.login__title Регистрация
+                  form(action="#" method="POST" class="form")
+                    .form-block
+                      .svg-wrap
+                        svg(role="img" class="svg")
+                          use( xlink:href="/assets/img/sprite.svg#name")
+                      input(type="text" class="info" placeholder="Имя")
+                    .form-block
+                      .svg-wrap
+                        svg(role="img" class="svg")
+                          use( xlink:href="/assets/img/sprite.svg#envelope")
+                      input(type="text" class="info" placeholder="Электронная почта")
+                    .form-block
+                      .svg-wrap
+                        svg(role="img" class="svg")
+                          use( xlink:href="/assets/img/sprite.svg#password")
+                      input(type="text" class="info" placeholder="Пароль")
+                    div(class='form-block height')
+                       .form-block__text Ваши данные остаются строго конфеденциальны
+                    .form-block
+                      input(type="submit" class='button' value="Создать аккаунт")
+                    .form-block
+                      .form-block__text Уже зарегистрированы?
+                      a(href='photo_main.html' class='form-link') Войти
+          .login__down
+              .login__down-text 2017 Создано командой профессионалов на продвинутом курсе по веб-разработке от LoftSchool

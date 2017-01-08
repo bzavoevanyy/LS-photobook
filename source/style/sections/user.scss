@@ -1,0 +1,15 @@
+.album__name.user{
+  justify-content: flex-end;
+}
+.home-wrap{
+  margin-top: 20px;
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  right: 0;
+  top:0;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 7px rgba(0,0,0,0.5);
+  cursor: pointer;
+}

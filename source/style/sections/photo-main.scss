@@ -1,0 +1,232 @@
+.world{
+  width: 100%;
+  height: 100%;
+  margin-top: 50px;
+  position: relative;
+  background: #fff;
+}
+.world__title{
+  width: 100%;
+  font-family: 'Panton-Bold';
+  font-size: 35px;
+  text-align: left;
+  margin-bottom: 40px;
+}
+.world__container{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.world__list{
+display: flex;
+  flex-flow: wrap;
+  margin: -1em 0 0 -1em;
+}
+.world__item{
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+  overflow: hidden;
+  margin-bottom: 20px;
+ margin-left: 20px;
+  vertical-align:top;
+
+}
+.world__top{
+  height: 250px;
+  display: flex;
+  width: 100%;
+
+}
+.world-img{
+  width: 100%;
+  position: relative;
+  background-size: cover;
+  background: url("/assets/img/no_photo.jpg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+
+}
+.img-hover{
+  height: 250px;
+  //width: 100%;
+  position: absolute;
+  background: #373e42;
+  opacity: 0.7;
+}
+.world__down{
+width: 100%;
+  overflow: hidden;
+
+}
+.world__down-inf{
+  width: 100%;
+  height: 90px;
+  display: flex;
+  flex-flow: column wrap;
+
+}
+.world__down-album{
+background: #f6f6f6;
+  height: 40px;
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+}
+.album__name{
+margin-right: 25px;
+}
+.album__name-text{
+  color:#6e6e6e;
+  position: relative;
+  font-family: 'Proxima Nova Semibold';
+  top:8px;
+  text-align: center;
+}
+.show{
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+
+}
+.show__button{
+  width: 130px;
+  height: 40px;
+  border-radius: 23px;
+  border:2px #28bbef solid;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover{
+    background: #28bbef;
+  }
+
+}
+.show__button-text{
+color: #28bbef;
+  font-family: "Proxima Nova Semibold";
+  cursor: pointer;
+  &:hover{
+    color: #fff;
+  }
+}
+.user__avatar.small{
+  width: 80px;
+  height: 100%;
+  margin-left: 20px;
+
+}
+.user__avatar-img.small{
+  width: 55px;
+  height: 55px;
+  margin: 0 auto;
+}
+.discription{
+text-align: left;
+  width: 70%;
+  margin: 15px 0 ;
+}
+.discription-text{
+font-size: 14px;
+  margin-left: 2px;
+}
+.comments{
+display: flex;
+  width: 120px;
+  flex-flow: row wrap;
+  justify-content: space-between;
+.svg-wrap{
+  width: 20px;
+  margin: 0;
+}
+  .svg{
+    top:3px;
+  }
+}
+.comments__note{
+  width: 20px;
+}
+.comments__quant{
+  width: 20px;
+}
+.likes{
+  width: 20px;
+}
+.likes__quant{
+  width: 20px;
+}
+//myalbum
+.myalbum{
+  width: 100%;
+  background: #f6f6f6;
+}
+.noalbum{
+  display: none;
+  width: 100%;
+  height: 300px;
+}
+.noalbum-text{
+position: relative;
+  top:50%;
+  left: 40%;
+ transform: translateY(50%);
+}
+.myalbum__title{
+  width: 100%;
+  font-family: 'Panton-Bold';
+  font-size: 35px;
+  text-align: left;
+  position: relative;
+   top:30px;
+  margin-bottom: 40px;
+}
+
+.myalbum__container{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 60px;
+}
+.myalbum__list{
+  display: flex;
+  margin: -1em 0 0 -1em;
+  flex-flow:  wrap;
+}
+.myalbum__item{
+  display: flex;
+  flex-direction: column;
+  width: 275px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
+  vertical-align:top;
+}
+.myalbum__top{
+  height: 280px;
+  display: flex;
+  width: 100%;
+  background: url("/assets/img/bg.jpg")  50% no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.myalbum__top-hover{
+
+}
+.hover-link{
+
+}
+.myalbum__down{
+  height: 50px;
+  width: 100%;
+  background:#fff;
+  display: flex;
+  justify-content: space-between;
+
+  .album__name-text{
+  top:12px;
+  }
+}

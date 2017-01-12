@@ -8,7 +8,7 @@ block content
     include ../commons/index/index_content
     .wrapper
         .header
-            .header-top
+            .header__top
                 .content
                     .header-container
                         .user
@@ -40,12 +40,18 @@ block content
                                             svg(role="img" class="svg")
                                                 use( xlink:href="/assets/img/sprite.svg#soc_email")
                         .edit
-                             a(href='photo_main.html' class='home-wrap')
+                            .edit-wrap
                                 .svg-wrap
                                     svg(role="img" class="svg")
                                         use( xlink:href="/assets/img/sprite.svg#home")
                                 .home-hover
-            .header-down
+                                    a(href='photo_main.html' class='hover-link')
+                                        .home-hover__block
+                                            .svg-wrap
+                                                svg(role="img" class="svg")
+                                                    use( xlink:href="/assets/img/sprite.svg#home")
+                                            .edit-hover__text На главную
+            .header__down
                 .content-down
                     .search
                         .svg-wrap
@@ -56,59 +62,22 @@ block content
         section.myalbum
             .content
                 .noalbum
-                    .noalbum-text Здесь еще нет ни одного альбома
+                    .noalbum-text Альбомы еще не созданы.Создайте альбомы с помощью кнопки доабвить
                 h2.myalbum__title Альбомы
                 .myalbum__container
                     ul.myalbum__list
                         li.myalbum__item
                             .myalbum__top
-                                .myalbum__top-hover
-                                    a.hover-link
+                                .myalbum-hover
+                                    a(href='#' class="hover-link")
+                                        .myalbum-hover__block
+                                            .album__discription Фотографии природы леса,енотов,оленей
+                                            .all
+                                                .photo__quant 7
+                                                .all__photo-text Фотографий
                             .myalbum__down
-                                div(class="album__name user")
-                                    a(href="#")
-                                        .album__name-text Горы
-                        li.myalbum__item
-                            .myalbum__top
-                                .myalbum__top-hover
-                                    a.hover-link
-                            .myalbum__down
-                                div(class="album__name user")
-                                    a(href="#")
-                                        .album__name-text Горы
-                        li.myalbum__item
-                            .myalbum__top
-                                .myalbum__top-hover
-                                    a.hover-link
-                            .myalbum__down
-                                div(class="album__name user")
-                                    a(href="#")
-                                        .album__name-text Горы
-                        li.myalbum__item
-                            .myalbum__top
-                                .myalbum__top-hover
-                                    a.hover-link
-                            .myalbum__down
-                                div(class="album__name user")
-                                    a(href="#")
-                                        .album__name-text Горы
-                        li.myalbum__item
-                            .myalbum__top
-                                .myalbum__top-hover
-                                    a.hover-link
-                            .myalbum__down
-                                div(class="album__name user")
-                                    a(href="#")
-                                        .album__name-text Горы
-                        li.myalbum__item
-                            .myalbum__top
-                                .myalbum__top-hover
-                                    a.hover-link
-                            .myalbum__down
-                                div(class="album__name user")
-                                    a(href="#")
-                                        .album__name-text Горы
-
+                                .user-album
+                                    .album__name Горы
         .footer
             .footer-overlay
                 .content

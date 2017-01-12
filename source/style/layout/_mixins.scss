@@ -1,3 +1,9 @@
+$blue: #20b6ed;
+$white: #ffffff;
+$dgrey:#a0a09f;
+$lgrey: #f6f6f6;
+$black: #050a0d;
+
 @mixin desktop {
   @media (max-width: 1920px) {
     @content

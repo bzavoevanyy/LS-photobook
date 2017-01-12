@@ -3,7 +3,7 @@
   height: 100%;
   margin-top: 50px;
   position: relative;
-  background: #fff;
+  background: $white;
 }
 .world__title{
   width: 100%;
@@ -11,6 +11,10 @@
   font-size: 35px;
   text-align: left;
   margin-bottom: 40px;
+  .svg-wrap{
+    display: flex;
+    align-items: center;
+  }
 }
 .world__container{
   position: relative;
@@ -64,20 +68,30 @@ width: 100%;
   height: 90px;
   display: flex;
   flex-flow: column wrap;
+  .user__avatar.small{
+    margin-left: 5px;
+  }
 
 }
 .world__down-album{
-background: #f6f6f6;
+background: $lgrey;
   height: 40px;
   display: flex;
   justify-content: flex-end;
   flex: 1;
+  .album-wrap{
+display: flex;
+    align-items: center;
+  }
 }
 .album__name{
-margin-right: 25px;
+margin: 0 20px 0 0;
+  color:$dgrey;
+  font-family: 'Proxima Nova Semibold';
+  font-size: 14px;
 }
 .album__name-text{
-  color:#6e6e6e;
+  color:$dgrey;
   position: relative;
   font-family: 'Proxima Nova Semibold';
   top:8px;
@@ -100,16 +114,16 @@ margin-right: 25px;
   justify-content: center;
   align-items: center;
   &:hover{
-    background: #28bbef;
+    background: $blue;
   }
 
 }
 .show__button-text{
-color: #28bbef;
+color: $blue;
   font-family: "Proxima Nova Semibold";
   cursor: pointer;
   &:hover{
-    color: #fff;
+    color: $white;
   }
 }
 .user__avatar.small{
@@ -126,41 +140,47 @@ color: #28bbef;
 .discription{
 text-align: left;
   width: 70%;
-  margin: 15px 0 ;
+  margin: 15px 0 10px;
 }
-.discription-text{
-font-size: 14px;
+.photo__discription{
+font-size: 18px;
   margin-left: 2px;
 }
 .comments{
-display: flex;
+  display: flex;
   width: 120px;
   flex-flow: row wrap;
   justify-content: space-between;
-.svg-wrap{
-  width: 20px;
+  margin-bottom: 10px;
+  .svg-wrap{
+  width: 25px;
   margin: 0;
 }
   .svg{
     top:3px;
+    width: 20px;
+    height: 20px;
   }
 }
 .comments__note{
   width: 20px;
+  height: 20px;
 }
 .comments__quant{
   width: 20px;
+  font-size: 16px;
 }
 .likes{
   width: 20px;
+  height: 20px;
 }
 .likes__quant{
   width: 20px;
+  font-size: 16px;
 }
 //myalbum
-.myalbum{
-  width: 100%;
-  background: #f6f6f6;
+.add.main{
+ margin-top: -60px;
 }
 .noalbum{
   display: none;
@@ -173,60 +193,181 @@ position: relative;
   left: 40%;
  transform: translateY(50%);
 }
-.myalbum__title{
-  width: 100%;
-  font-family: 'Panton-Bold';
-  font-size: 35px;
-  text-align: left;
-  position: relative;
-   top:30px;
-  margin-bottom: 40px;
-}
 
-.myalbum__container{
-  position: relative;
-  width: 100%;
+.album-name__block{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
   height: 100%;
-  margin-bottom: 60px;
-}
-.myalbum__list{
-  display: flex;
-  margin: -1em 0 0 -1em;
-  flex-flow:  wrap;
-}
-.myalbum__item{
-  display: flex;
-  flex-direction: column;
-  width: 275px;
-  overflow: hidden;
-  margin-bottom: 20px;
-  margin-left: 20px;
-  margin-top: 20px;
-  vertical-align:top;
-}
-.myalbum__top{
-  height: 280px;
-  display: flex;
-  width: 100%;
-  background: url("/assets/img/bg.jpg")  50% no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
-.myalbum__top-hover{
-
-}
-.hover-link{
-
-}
-.myalbum__down{
-  height: 50px;
-  width: 100%;
-  background:#fff;
-  display: flex;
-  justify-content: space-between;
-
-  .album__name-text{
-  top:12px;
+  width: 80%;
+  .album__name{
+    color: #cdcdcd;
+    font-family: "Proxima Nova Semibold";
+    font-size: 14px;
+    margin: 0;
   }
+}
+.edit-hover{
+  display: none;
+  position: absolute;
+  background: $blue;
+  top: 20px;
+  height: 40px;
+  z-index: 10;
+  right: 0;
+  border-radius: 23px;
+.svg-wrap{
+  margin: 0 0 5px;
+  .svg{
+    fill:$white;
+  }
+}
+
+}
+.edit-hover__block{
+  height: 40px;
+  display: flex;
+flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.edit-hover__text{
+  font-family: "Panton-Bold";
+  color: $white;
+  font-size: 10px;
+  margin-right: 20px;
+
+}
+.edit-hover:before{
+  content: "";
+  display: block;
+  position: absolute;
+  height: 40px;
+
+}
+
+.edit-wrap:hover .edit-hover {
+  display: block;
+}
+
+.goout-hover{
+  display: none;
+  position: absolute;
+  background: $blue;
+  top: 70px;
+  height: 40px;
+  z-index: 10;
+  right: 0;
+  border-radius: 23px;
+  .svg-wrap{
+    margin: 0 0 5px;
+    .svg{
+      fill:$white;
+    }
+  }
+
+}
+.goout-hover__block{
+  height: 40px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.goout-hover__text{
+  font-family: "Panton-Bold";
+  color: $white;
+  font-size: 10px;
+  margin-right: 10px;
+
+}
+.goout-hover:before{
+  content: "";
+  display: block;
+  position: absolute;
+  height: 40px;
+
+}
+
+.edit-wrap:hover .goout-hover {
+  display: block;
+}
+.world-hover{
+  display: none;
+  position: absolute;
+  background: $black;
+  opacity: 0.7;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  right: 0;
+  .svg-wrap{
+    width: 55px;
+    height: 55px;
+    margin: 0;
+  }
+  .svg{
+    width: 40px;
+    height: 40px;
+    fill:$white;
+    margin-bottom: 20px;
+  }
+}
+.world-hover:before{
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+
+}
+.world__top:hover .world-hover {
+  display: block;
+}
+.world-hover__block{
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.avatar-hover{
+  display: none;
+  position: absolute;
+  background: $black;
+  opacity: 0.7;
+  top: 0;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  right: 0;
+  .svg-wrap{
+    width: 50px;
+    height: 50px;
+    margin: 0;
+  }
+  .svg{
+   width: 20px;
+    height: 20px;
+    fill:$white;
+
+  }
+}
+.avatar-hover__block{
+display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.avatar-hover:before{
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+
+}
+.user__avatar-img.small:hover .avatar-hover {
+  display: block;
 }

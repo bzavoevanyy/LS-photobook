@@ -8,7 +8,7 @@ block content
     include ../commons/index/index_content
     .wrapper
         .header
-            .header-top
+            .header__top
                 .content
                     .header-container
                         .user-block
@@ -17,24 +17,35 @@ block content
                                     img.avatar-pic(src="/assets/img/user.jpg" alt="")
                             .user__inf
                               .user__name Фамилия Имя
-                        .album-discribtion
-                            .album-discribtion__title Лесные прогулки
-                            .album-discribtion__text Фотографии природы леса,енотов,оленей.Как приятно сойти на дальней станции и пройтись босиком
+                        .album
+                            .album__name Лесные прогулки
+                            .album__discription Фотографии природы леса,енотов,оленей.Как приятно сойти на дальней станции и пройтись по полю босиком.И чтобы никто не беспокоил, бродить не спеша, влюбленным в эту тишину. Запах елей, сосен будоражит
                         .edit
-                            a(href='photo_main.html' class='home-wrap')
+                            .edit-wrap
                                 .svg-wrap
                                     svg(role="img" class="svg")
                                         use( xlink:href="/assets/img/sprite.svg#home")
                                 .home-hover
-                            a(href='#' class='edit-wrap album')
+                                    a(href='photo_main.html' class='hover-link')
+                                        .home-hover__block
+                                            .svg-wrap
+                                                svg(role="img" class="svg")
+                                                    use( xlink:href="/assets/img/sprite.svg#home")
+                                            .edit-hover__text На главную
+                            .edit-wrap
                                 .svg-wrap
                                     svg(role="img" class="svg")
                                         use( xlink:href="/assets/img/sprite.svg#edit")
-                                .edit-hover
+                                .edit-hover.album
+                                    a(href='#' class='hover-link')
+                                        .edit-hover__block
+                                            .svg-wrap
+                                                svg(role="img" class="svg")
+                                                    use( xlink:href="/assets/img/sprite.svg#edit")
+                                            .edit-hover__text Редактировать
 
-            .header-down
-                .content-down
-                    .flex
+            .header__down
+                .content-down.all
                         .all
                             .all__photo
                                 .photo__quant 1
@@ -45,149 +56,140 @@ block content
                             .all__comments
                                 .comments__quant 1
                                 .all__comments-text Комментариев
-        section.myalbum
+        section.album-photo
             .content
                 .noalbum
-                    .noalbum-text Здесь еще нет ни одного альбома
+                    .noalbum-text Здесь еще нет ни одно фотографии
                 .add
                     .add__btn
-                        svg-wrap
+                        .svg-wrap
                             svg(role="img" class="svg")
                                 use( xlink:href="/assets/img/sprite.svg#add")
-                .myalbum__container
-                    ul.myalbum__list
-                        li(class='myalbum__item width')
-                            .myalbum__top
-                                .myalbum__top-hover
-                                    a.hover-link
-                                div(class='comments album')
-                                    .comments__note
-                                        .svg-wrap
+                        .add-hover
+                            a(href='#' class='hover-link')
+                                .add-hover__block
+                                    .svg-wrap
+                                        svg(role="img" class="svg")
+                                            use( xlink:href="/assets/img/sprite.svg#add")
+                                    .add-hover__text Добавить
+                .album-photo__container
+                    ul.album-photo__list
+                        li(class='album-photo__item')
+                            .album-photo__top
+                                .album-photo__img
+                                    .img-hover
+                                        a(href='#' class='hover-link')
+                                          .img-hover__block
                                             svg(role="img" class="svg")
-                                                use( xlink:href="/assets/img/sprite.svg#comments")
+                                                use( xlink:href="/assets/img/sprite.svg#loupe")
+                                .comments.album
+                                    a(href='#' class='comments-link')
+                                        .comments__note
+                                            .svg-wrap
+                                                svg(role="img" class="svg")
+                                                    use( xlink:href="/assets/img/sprite.svg#comments")
                                     .comments__quant 1
-                                    .likes
-                                        .svg-wrap
-                                            svg(role="img" class="svg")
-                                                use( xlink:href="/assets/img/sprite.svg#like")
+                                    a(href="#" class="likes-link")
+                                        .likes
+                                            .svg-wrap
+                                                svg(role="img" class="svg")
+                                                    use( xlink:href="/assets/img/sprite.svg#like")
                                     .likes__quant 1
-                            .myalbum__down
-                                .svg-wrap
-                                    svg(role="img" class="svg")
-                                        use( xlink:href="/assets/img/sprite.svg#edit")
-                                .album__name
+                            .album-photo__down
+                                a(href="#" class="edit-link")
+                                    .svg-wrap
+                                        svg(role="img" class="svg")
+                                            use( xlink:href="/assets/img/sprite.svg#edit")
+                                .photo__name
                                     a(href="#")
-                                        .album__name-text Горы
-                        li(class='myalbum__item width')
-                            .myalbum__top
-                                .myalbum__top-hover
-                                    a.hover-link
-                                div(class='comments album')
-                                    .comments__note
-                                        .svg-wrap
-                                            svg(role="img" class="svg")
-                                                use( xlink:href="/assets/img/sprite.svg#comments")
+                                        .photo__name-text Горы
+                        li(class='album-photo__item')
+                            .album-photo__top
+                                .album-photo__img
+                                    .img-hover
+                                        a(href='#' class='hover-link')
+                                            .img-hover__block
+                                                svg(role="img" class="svg")
+                                                    use( xlink:href="/assets/img/sprite.svg#loupe")
+                                .comments.album
+                                    a(href='#' class='comments-link')
+                                        .comments__note
+                                            .svg-wrap
+                                                svg(role="img" class="svg")
+                                                    use( xlink:href="/assets/img/sprite.svg#comments")
                                     .comments__quant 1
-                                    .likes
-                                        .svg-wrap
-                                            svg(role="img" class="svg")
-                                                use( xlink:href="/assets/img/sprite.svg#like")
+                                    a(href="#" class="likes-link")
+                                        .likes
+                                            .svg-wrap
+                                                svg(role="img" class="svg")
+                                                    use( xlink:href="/assets/img/sprite.svg#like")
                                     .likes__quant 1
-                            .myalbum__down
-                                .svg-wrap
-                                    svg(role="img" class="svg")
-                                        use( xlink:href="/assets/img/sprite.svg#edit")
-                                .album__name
+                            .album-photo__down
+                                a(href="#" class="edit-link")
+                                    .svg-wrap
+                                        svg(role="img" class="svg")
+                                            use( xlink:href="/assets/img/sprite.svg#edit")
+                                .photo__name
                                     a(href="#")
-                                        .album__name-text Горы
-                        li(class='myalbum__item width')
-                            .myalbum__top
-                                .myalbum__top-hover
-                                    a.hover-link
-                                div(class='comments album')
-                                    .comments__note
-                                        .svg-wrap
-                                            svg(role="img" class="svg")
-                                                use( xlink:href="/assets/img/sprite.svg#comments")
+                                        .photo__name-text Горы
+                        li(class='album-photo__item')
+                            .album-photo__top
+                                .album-photo__img
+                                    .img-hover
+                                        a(href='#' class='hover-link')
+                                            .img-hover__block
+                                                svg(role="img" class="svg")
+                                                    use( xlink:href="/assets/img/sprite.svg#loupe")
+                                .comments.album
+                                    a(href='#' class='comments-link')
+                                        .comments__note
+                                            .svg-wrap
+                                                svg(role="img" class="svg")
+                                                    use( xlink:href="/assets/img/sprite.svg#comments")
                                     .comments__quant 1
-                                    .likes
-                                        .svg-wrap
-                                            svg(role="img" class="svg")
-                                                use( xlink:href="/assets/img/sprite.svg#like")
+                                    a(href="#" class="likes-link")
+                                        .likes
+                                            .svg-wrap
+                                                svg(role="img" class="svg")
+                                                    use( xlink:href="/assets/img/sprite.svg#like")
                                     .likes__quant 1
-                            .myalbum__down
-                                .svg-wrap
-                                    svg(role="img" class="svg")
-                                        use( xlink:href="/assets/img/sprite.svg#edit")
-                                .album__name
+                            .album-photo__down
+                                a(href="#" class="edit-link")
+                                    .svg-wrap
+                                        svg(role="img" class="svg")
+                                            use( xlink:href="/assets/img/sprite.svg#edit")
+                                .photo__name
                                     a(href="#")
-                                        .album__name-text Горы
-                        li(class='myalbum__item width')
-                            .myalbum__top
-                                .myalbum__top-hover
-                                    a.hover-link
-                                div(class='comments album')
-                                    .comments__note
-                                        .svg-wrap
-                                            svg(role="img" class="svg")
-                                                use( xlink:href="/assets/img/sprite.svg#comments")
+                                        .photo__name-text Горы
+                        li(class='album-photo__item')
+                            .album-photo__top
+                                .album-photo__img
+                                    .img-hover
+                                        a(href='#' class='hover-link')
+                                            .img-hover__block
+                                                svg(role="img" class="svg")
+                                                    use( xlink:href="/assets/img/sprite.svg#loupe")
+                                .comments.album
+                                    a(href='#' class='comments-link')
+                                        .comments__note
+                                            .svg-wrap
+                                                svg(role="img" class="svg")
+                                                    use( xlink:href="/assets/img/sprite.svg#comments")
                                     .comments__quant 1
-                                    .likes
-                                        .svg-wrap
-                                            svg(role="img" class="svg")
-                                                use( xlink:href="/assets/img/sprite.svg#like")
+                                    a(href="#" class="likes-link")
+                                        .likes
+                                            .svg-wrap
+                                                svg(role="img" class="svg")
+                                                    use( xlink:href="/assets/img/sprite.svg#like")
                                     .likes__quant 1
-                            .myalbum__down
-                                .svg-wrap
-                                    svg(role="img" class="svg")
-                                        use( xlink:href="/assets/img/sprite.svg#edit")
-                                .album__name
+                            .album-photo__down
+                                a(href="#" class="edit-link")
+                                    .svg-wrap
+                                        svg(role="img" class="svg")
+                                            use( xlink:href="/assets/img/sprite.svg#edit")
+                                .photo__name
                                     a(href="#")
-                                        .album__name-text Горы
-                        li(class='myalbum__item width')
-                            .myalbum__top
-                                .myalbum__top-hover
-                                    a.hover-link
-                                div(class='comments album')
-                                    .comments__note
-                                        .svg-wrap
-                                            svg(role="img" class="svg")
-                                                use( xlink:href="/assets/img/sprite.svg#comments")
-                                    .comments__quant 1
-                                    .likes
-                                        .svg-wrap
-                                            svg(role="img" class="svg")
-                                                use( xlink:href="/assets/img/sprite.svg#like")
-                                    .likes__quant 1
-                            .myalbum__down
-                                .svg-wrap
-                                    svg(role="img" class="svg")
-                                        use( xlink:href="/assets/img/sprite.svg#edit")
-                                .album__name
-                                    a(href="#")
-                                        .album__name-text Горы
-                        li(class='myalbum__item width')
-                            .myalbum__top
-                                .myalbum__top-hover
-                                    a.hover-link
-                                div(class='comments album')
-                                    .comments__note
-                                        .svg-wrap
-                                            svg(role="img" class="svg")
-                                                use( xlink:href="/assets/img/sprite.svg#comments")
-                                    .comments__quant 1
-                                    .likes
-                                        .svg-wrap
-                                            svg(role="img" class="svg")
-                                                use( xlink:href="/assets/img/sprite.svg#like")
-                                    .likes__quant 1
-                            .myalbum__down
-                                .svg-wrap
-                                    svg(role="img" class="svg")
-                                        use( xlink:href="/assets/img/sprite.svg#edit")
-                                .album__name
-                                    a(href="#")
-                                        .album__name-text Горы
+                                        .photo__name-text Горы
 
         .footer
             .footer-overlay

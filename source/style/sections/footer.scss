@@ -6,11 +6,12 @@
   background-color: #373e42;
   background-size: cover;
   display: flex;
+  margin-top: 40px;
 }
 .footer-overlay{
   width: 100%;
   height: 100%;
-  background:#0a0a0a;
+  background:$black;
   opacity: 0.8;
 }
 .footer-wrap{
@@ -40,13 +41,13 @@
 }
 
 .footer-text{
-  color: #fff;
+  color: $white;
   display: flex;
 }
 .footer-arrow{
 display: flex;
 }
 .footer-autors{
-  color: #fff;
+  color: $white;
   opacity: 0.5;
 }

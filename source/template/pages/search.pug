@@ -13,11 +13,17 @@ block content
                     .search-container
                         .search-header__title Исследуй мир
                         .edit
-                            a(href='photo_main.html' class='home-wrap')
+                            .edit-wrap
                                 .svg-wrap
                                     svg(role="img" class="svg")
                                         use( xlink:href="/assets/img/sprite.svg#home")
                                 .home-hover
+                                    a(href='photo_main.html' class='hover-link')
+                                        .home-hover__block
+                                            .svg-wrap
+                                                svg(role="img" class="svg")
+                                                    use( xlink:href="/assets/img/sprite.svg#home")
+                                            .edit-hover__text На главную
             .search-header__down
                 .content
                     .flex__down
@@ -33,123 +39,56 @@ block content
                                         use( xlink:href="/assets/img/sprite.svg#search")
                                 input(type="text" class="search-input" placeholder="Исследовать мир")
                         .search-header__text
-                            a(href='#' class='search-header__link') Показать еще
+                            a(href='#' class='search-header__link') Показать новые
 
         section.world
             .content
-                h2.world__title Поиск по запросу результатов не дал
+                .noalbum
+                    .noalbum-text Увы , пока ничего не загружено!Загрузите что-нибудь и станьте первым
+                .search-answer
+                    .search-answer__text По запросу "Природа" было найдено 9 результатов
                 .world__container
                     ul.world__list
-                        li.world__item
-                            .world__top
-                                .world-img
+                        li(class='album-photo__item')
+                            .album-photo__top
+                                .album-photo__img
+                                    .img-hover
+                                        a(href='#' class='hover-link')
+                                            .img-hover__block
+                                                svg(role="img" class="svg")
+                                                    use( xlink:href="/assets/img/sprite.svg#loupe")
                             .world__down
                                 .world__down-inf
-                                    div(class='user__avatar small')
-                                        div(class='user__avatar-img small' style="background-image:url('/assets/img/user.jpg');")
+                                    .user__avatar.small
+                                        .user__avatar-img.small(style="background-image:url('/assets/img/user.jpg');")
+                                            .avatar-hover
+                                                a(href='#' class='avatar-hover__link')
+                                                    .avatar-hover__block
+                                                        svg(role="img" class="svg")
+                                                            use( xlink:href="/assets/img/sprite.svg#more")
                                     .discription
-                                        .discription-text Отдых в горах
+                                        .photo__discription Отдых в горах
                                     .comments
-                                        .comments__note
-                                            .svg-wrap
-                                                svg(role="img" class="svg")
-                                                    use( xlink:href="/assets/img/sprite.svg#comments")
+                                        a(href="#" class='comment-link')
+                                            .comments__note
+                                                .svg-wrap
+                                                    svg(role="img" class="svg")
+                                                        use( xlink:href="/assets/img/sprite.svg#comments")
                                         .comments__quant 1
-                                        .likes
-                                            .svg-wrap
-                                                svg(role="img" class="svg")
-                                                    use( xlink:href="/assets/img/sprite.svg#like")
+                                        a(href='#' class='likes-link')
+                                            .likes
+                                                .svg-wrap
+                                                    svg(role="img" class="svg")
+                                                        use( xlink:href="/assets/img/sprite.svg#like")
                                         .likes__quant 1
                                 .world__down-album
-                                    .svg-wrap
-                                        svg(role="img" class="svg")
-                                            use( xlink:href="/assets/img/sprite.svg#album")
-                                    .album__name
-                                        a(href="#")
-                                            .album__name-text Горы
-                        li.world__item
-                            .world__top
-                                .world-img
-                            .world__down
-                                .world__down-inf
-                                    div(class='user__avatar small')
-                                        div(class='user__avatar-img small' style="background-image:url('/assets/img/user.jpg');")
-                                    .discription
-                                        .discription-text Отдых в горах
-                                    .comments
-                                        .comments__note
-                                            .svg-wrap
-                                                svg(role="img" class="svg")
-                                                    use( xlink:href="/assets/img/sprite.svg#comments")
-                                        .comments__quant 1
-                                        .likes
-                                            .svg-wrap
-                                                svg(role="img" class="svg")
-                                                    use( xlink:href="/assets/img/sprite.svg#like")
-                                        .likes__quant 1
-                                .world__down-album
-                                    .svg-wrap
-                                        svg(role="img" class="svg")
-                                            use( xlink:href="/assets/img/sprite.svg#album")
-                                    .album__name
-                                        a(href="#")
-                                            .album__name-text Горы
-                        li.world__item
-                            .world__top
-                                .world-img
-                            .world__down
-                                .world__down-inf
-                                    div(class='user__avatar small')
-                                        div(class='user__avatar-img small' style="background-image:url('/assets/img/user.jpg');")
-                                    .discription
-                                        .discription-text Отдых в горах
-                                    .comments
-                                        .comments__note
-                                            .svg-wrap
-                                                svg(role="img" class="svg")
-                                                    use( xlink:href="/assets/img/sprite.svg#comments")
-                                        .comments__quant 1
-                                        .likes
-                                            .svg-wrap
-                                                svg(role="img" class="svg")
-                                                    use( xlink:href="/assets/img/sprite.svg#like")
-                                        .likes__quant 1
-                                .world__down-album
-                                    .svg-wrap
-                                        svg(role="img" class="svg")
-                                            use( xlink:href="/assets/img/sprite.svg#album")
-                                    .album__name
-                                        a(href="#")
-                                            .album__name-text Горы
-                        li.world__item
-                            .world__top
-                                .world-img
-                            .world__down
-                                .world__down-inf
-                                    div(class='user__avatar small')
-                                        div(class='user__avatar-img small' style="background-image:url('/assets/img/user.jpg');")
-                                    .discription
-                                        .discription-text Отдых в горах
-                                    .comments
-                                        .comments__note
-                                            .svg-wrap
-                                                svg(role="img" class="svg")
-                                                    use( xlink:href="/assets/img/sprite.svg#comments")
-                                        .comments__quant 1
-                                        .likes
-                                            .svg-wrap
-                                                svg(role="img" class="svg")
-                                                    use( xlink:href="/assets/img/sprite.svg#like")
-                                        .likes__quant 1
-                                .world__down-album
-                                    .svg-wrap
-                                        svg(role="img" class="svg")
-                                            use( xlink:href="/assets/img/sprite.svg#album")
-                                    .album__name
-                                        a(href="#")
-                                            .album__name-text Горы
-
-
+                                    a(href='#' class="edit-link")
+                                        .svg-wrap
+                                            svg(role="img" class="svg")
+                                                use( xlink:href="/assets/img/sprite.svg#album")
+                                    .album-wrap
+                                        a(href='user.html')
+                                            .album__name Горы
         .footer
             .footer-overlay
                 .content

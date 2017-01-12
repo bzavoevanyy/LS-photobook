@@ -1,9 +1,7 @@
-.edit-wrap.album{
-  top: 60px;
-}
 .user-block{
-  width: 250px;
+  width: 19%;
   height: 65px;
+  margin-top: 15px;
   display: flex;
   flex-flow: row wrap;
   .user__inf{
@@ -14,47 +12,62 @@
     align-items: center;
 
   }
+  .user__avatar-img.small{
+    align-items: center;
+    width: 50px;
+    height: 50px;
+  }
   .user__name{
-    margin: 40px 0 0 0;
+    margin:  20px 0 0 10px;
     font-size: 16px;
   }
 }
-.album-discribtion{
+.edit-hover.album{
+  top:70px;
+}
+.album{
 text-align: center;
 display: flex;
-  width: 750px;
+  width: 61%;
   flex-flow: column wrap;
   justify-content: center;
+  align-items: center;
 }
-.album-discribtion__title{
+.album__name{
   font-family: "Panton-Bold";
  font-size: 21px;
   color: #fff;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  margin-top: 30px;
 }
-.album-discribtion__text{
+.album__discription{
   color:#fff;
+  width: 100%;
+  margin-bottom: 60px;
+  overflow: hidden;
 }
 .comments.album{
 position: absolute;
-  bottom: 5px;
-  left:5px;
+  z-index: 15;
+  bottom: 20px;
+  left:20px;
   .svg{
-    fill:#fff;
+    fill:$white
   }
   .comments__quant{
-    color: #fff;
+    color: $white;
   }
   .likes__quant{
-    color:#fff;
+    color:$white;
   }
 }
-.myalbum__item.width{
+
+.album-photo__item.width{
   width: 380px;
 }
 .add{
   width: 100%;
-  height: 60px;
+  height: 70px;
   position: relative;
 }
 .add__btn{
@@ -64,29 +77,77 @@ position: absolute;
   right: 0;
   bottom: 0;
   border-radius: 50%;
-  background: #fff;
+  background: $white;
   box-shadow: 0 0 7px rgba(0,0,0,0.5);
   display: flex;
   align-items: center;
   justify-content: center;
-  .svg{
-    width: 25px;
-    height: 25px;
-    fill:#9e9e9e;
+  .svg-wrap{
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    .svg{
+      width: 20px;
+      height: 20px;
+      fill:$dgrey;
+    }
   }
+
 }
-.flex{
-  position: relative;
+.add-hover{
+  display: none;
+  position: absolute;
+  background: #28bbef;
+  top: 0;
+  height: 40px;
+  z-index: 10;
+  right: 0;
+  border-radius: 23px;
+  .svg-wrap{
+    margin: 0 0 5px;
+    .svg{
+      fill:#fff;
+    }
+  }
+
+}
+.add-hover__block{
+  height: 40px;
   display: flex;
-  width: 100%;
-  height: 100%;
-  flex:1;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.add-hover__text{
+  font-family: "Panton-Bold";
+  color: #fff;
+  font-size: 10px;
+  margin-right: 20px;
+
+}
+.edit-hover:before{
+  content: "";
+  display: block;
+  position: absolute;
+  height: 40px;
+
+}
+
+.add__btn:hover .add-hover {
+  display: block;
+}
+.content-down.all{
+  display: flex;
+  //flex:1;
   justify-content: center;
 }
 .all{
   display: flex;
   justify-content: center;
   flex-flow:wrap;
+  margin-left: 30px;
+  color: $black;
+  font-family: "Panton-Bold";
 }
 .all__photo{
   margin-left: 20px;
@@ -98,14 +159,13 @@ position: absolute;
   margin-right: 10px;
 }
 .all__photo-text{
-  font-family: "Panton-Bold";
+  color: $black;
 }
 .all__likes{
   display: flex;
   flex-flow: row wrap;
   margin-left: 20px;
   align-items: center;
-
 }
 
 .all__likes-text{
@@ -119,4 +179,102 @@ font-family: "Panton-Bold";
 }
 .all__comments-text{
   font-family: "Panton-Bold";
+}
+.album-photo{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: $lgrey;
+}
+.album-photo__container{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.album-photo__list{
+  display: flex;
+  flex-flow: wrap;
+  margin: -1em 0 0 -1em;
+}
+.album-photo__item{
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  vertical-align:top;
+  box-shadow: 0 0 7px rgba(0,0,0,0.5);
+}
+.album-photo__top{
+  height: 250px;
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+.album-photo__img{
+  width: 100%;
+  position: relative;
+  background-size: cover;
+  background: url("/assets/img/forest.jpg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+.album-photo__down{
+  width: 100%;
+  background: $white;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
+}
+.photo__name{
+  display: flex;
+align-items: center;
+}
+.photo__name-text{
+color: $black;
+  margin-right: 20px;
+}
+.img-hover{
+
+display: none;
+position: absolute;
+background: $black;
+opacity: 0.8;
+top: 0;
+height: 100%;
+  width: 100%;
+  z-index: 10;
+right: 0;
+.svg-wrap{
+  width: 55px;
+  height: 55px;
+  margin: 0;
+}
+.svg{
+  width: 40px;
+  height: 40px;
+  fill:$white;
+}
+}
+.img-hover:before{
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+
+}
+.album-photo__top:hover .img-hover {
+  display: block;
+}
+.img-hover__block{
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
 }

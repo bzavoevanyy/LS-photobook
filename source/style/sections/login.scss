@@ -19,7 +19,7 @@ background-size: cover;
   text-align: center;
 }
 .form{
-  width: 290px;
+  width: 280px;
  flex-flow: column wrap;
   background: #fff;
   border-radius: 10%;
@@ -32,13 +32,14 @@ background-size: cover;
 .form-block{
   display: flex;
   flex:1;
-  height: 43px;
+  height: 40px;
   width: 100%;
   position: relative;
 
 }
 .form-block:nth-child(1){
   border-bottom: 1px #cdcdcd solid;
+
 }
 .form-block:nth-child(2){
   border-bottom: 1px #cdcdcd solid;
@@ -57,8 +58,8 @@ background-size: cover;
 
 .form-link__text{
   color:#28bbef;
-  margin-left:20px;
-  margin-top: 10px;
+  margin-left:15px;
+  margin-top: 0;
 }
 .form-block.error{
   display: none;
@@ -99,24 +100,24 @@ text-decoration: none;
   color: #fff;
   width: 100%;
   font-family: 'Panton-Bold';
-  font-size: 35px;
+  font-size: 42px;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 .login__text{
   color:#fff;
   width: 100%;
   text-align: center;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 }
 .flip-container {
   perspective: 1000px;
   margin: 0 auto;
-  width:565px;
+  width:560px;
   height: 365px;
   position: relative;
-  top:50%;
-  transform:translateY(-50%);
+  top:20%;
+  transform:translateY(-20%);
 
 
 }
@@ -126,7 +127,7 @@ text-decoration: none;
 }
 
 .flip-container, .front, .back {
-  width: 565px;
+  width: 560px;
   height: 365px;
 }
 
@@ -160,7 +161,7 @@ text-decoration: none;
 }
 .svg-wrap{
   width: 40px;
-  height: 100%;
+  height: 40px;
   text-align: center;
   margin-left: 20px;
   .svg{

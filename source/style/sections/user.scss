@@ -1,5 +1,74 @@
-.album__name.user{
+.myalbum{
+  width: 100%;
+  background: $lgrey;
+}
+.myalbum__title{
+  width: 100%;
+  font-family: 'Panton-Bold';
+  height: 50px;
+  font-size: 35px;
+  text-align: left;
+  position: relative;
+  top:30px;
+  margin-bottom: 40px;
+  z-index: 1;
+}
+
+.myalbum__container{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 60px;
+}
+.myalbum__list{
+  display: flex;
+  margin: -1em 0 0 -1em;
+  flex-flow:  wrap;
+}
+.myalbum__item{
+  display: flex;
+  flex-direction: column;
+  width: 275px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
+  vertical-align:top;
+  box-shadow: 0 0 7px rgba(0,0,0,0.5);
+}
+.myalbum__top{
+  height: 280px;
+  display: flex;
+  width: 100%;
+  background: url("/assets/img/bg.jpg")  50% no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.myalbum__down{
+  height: 50px;
+  width: 100%;
+  background:#fff;
+  display: flex;
+  justify-content: space-between;
+  .svg-wrap{
+    height: 100%;
+  }
+
+}
+.user-album{
+  width: 100%;
+  display: flex;
   justify-content: flex-end;
+  align-items: center;
+
+
+  .album__name{
+    font-family: "Proxima Nova Semibold";
+   margin: 0 20px 0;
+    font-size: 14px;
+    color: $black;
+  }
 }
 .home-wrap{
   margin-top: 20px;
@@ -8,8 +77,96 @@
   height: 45px;
   right: 0;
   top:0;
-  background: #fff;
+  background: $white;
   border-radius: 50%;
   box-shadow: 0 0 7px rgba(0,0,0,0.5);
   cursor: pointer;
+}
+.home-hover{
+  display: none;
+  position: absolute;
+  background: $blue;
+  top: 20px;
+  height: 40px;
+  z-index: 10;
+  right: 0;
+  border-radius: 23px;
+  .svg-wrap{
+    margin: 0 0 5px;
+    .svg{
+      fill:$white;
+    }
+  }
+  .edit-hover__text{
+    font-family: "Panton-Bold";
+    color: $white;
+    font-size: 10px;
+    width: 60px;
+  }
+
+}
+.home-hover__block{
+  height: 40px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+
+.home-hover:before{
+  content: "";
+  display: block;
+  position: absolute;
+  height: 40px;
+}
+
+.edit-wrap:hover .home-hover {
+  display: block;
+}
+.myalbum-hover{
+  display: none;
+  position: absolute;
+  background:$black;
+  opacity: 0.7;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  right: 0;
+
+}
+
+.myalbum-hover__block{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: flex-end;
+  align-items:flex-start;
+  flex-flow: column;
+  .album__discription{
+    margin-left: 30px;
+  }
+  .all{
+    position: relative;
+    bottom: 35px;
+  }
+  .photo__quant{
+    color:$white;
+    font-family: "Panton-Bold";
+  }
+  .all__photo-text{
+    color:$white;
+  }
+}
+
+.myalbum-hover__block:before{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.myalbum__top:hover .myalbum-hover {
+  display: block;
 }

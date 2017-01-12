@@ -3,10 +3,10 @@
   height: 300px;
   width: 100%;
   background:url("/assets/img/bg.jpg") center  no-repeat;
-  background-color: #373e42;
+  background-color: $dgrey;
   background-size: cover;
 }
-.header-top{
+.header__top{
   height: 240px;
   width: 100%;
 }
@@ -18,31 +18,32 @@
   justify-content: space-between;
   flex-flow: row wrap;
 }
-.header-down{
+.header__down{
   width: 100%;
   height: 60px;
   opacity: 0.7;
   background: #c4cbcd;
 }
 .user{
-  width: 580px;
+  width: 610px;
   height: 100%;
   display: flex;
   flex-flow: row wrap;
 }
 .user__avatar{
-  width: 150px;
+  width: 170px;
   height: 100%;
-  margin: 0;  display: flex;
+  margin: 0;
+  display: flex;
   align-items: center;
 }
 
 .user__avatar-img{
-  width: 130px;
-  height: 130px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   border: 2px #fff solid;
-  margin: 0 auto;
+  margin:3px 0 0 26px;
   position:relative;
   background-size:cover;
   background-position: 50% 10%;
@@ -63,20 +64,20 @@
 }
 .user__name{
   font-size: 21px;
-  color: #fff;
+  color: $white;
   width: 100%;
   font-family: 'Panton-Bold';
-  margin: 55px 15px 20px;
+  margin: 55px 35px 10px;
 }
 .user__text{
-  color: #fff;
-  margin: 0 15px 20px;
+  color: $white;
+  margin: 0 35px 20px;
   word-break: break-all;
 }
 .user__icons-list{
   width: 160px;
   display: flex;
-  margin-left: 15px;
+ margin-top: 20px;
 }
 .user__icons-item{
   display: flex;
@@ -84,9 +85,9 @@
   flex-flow: row wrap;
   opacity: 0.8;
   .svg{
-    width: 25px;
-    height: 25px;
-    fill:#fff;
+    width: 20px;
+    height: 20px;
+    fill:$white;
   }
   &:hover{
     opacity: 1;
@@ -94,41 +95,38 @@
 }
 .edit{
 
-  width: 100px;
+  width: 20%;
   height: 100%;
   position: relative;
-  .svg-wrap{
-    margin: 0 auto;
-  }
-  .svg{
-    width: 20px;
-    height: 20px;
-    fill:#cdcdcd;
-  }
+  display: flex;
+  flex-flow: column;
+ align-items: flex-end;
+
 }
 .edit-wrap{
   margin-top: 20px;
-  position: absolute;
-  width: 45px;
-  height: 45px;
-  right: 0;
-  top:0;
-  background: #fff;
+  margin-bottom: -10px;
+  width: 40px;
+  height: 40px;
+  background: $white;
   border-radius: 50%;
   box-shadow: 0 0 7px rgba(0,0,0,0.5);
   cursor: pointer;
+
+  .svg-wrap{
+    margin:0 auto;
+    width: 40px;
+    height: 40px;
+    .svg{
+      margin-top: 0;
+      width: 20px;
+      height: 20px;
+      fill:$dgrey;
+    }
+  }
+
 }
-.logout{
-  margin-top: 80px;
-  position: absolute;
-  width: 45px;
-  height: 45px;
-  right: 0;
-  background: #fff;
-  border-radius: 50%;
-  box-shadow: 0 0 7px rgba(0,0,0,0.5);
-  cursor: pointer;
-}
+
 .content-down{
   max-width: 1200px;
   height: 100%;
@@ -139,12 +137,12 @@
 .search{
   display: flex;
   flex-flow: row wrap;
-  width: 390px;
-  height: 45px;
+  width: 380px;
+  height: 40px;
   border-radius: 23px;
-  background: #fff;
+  background: $white;
   &:hover{
-    border: 1px #28bbef solid;
+    border: 1px $blue solid;
   }
 
 }

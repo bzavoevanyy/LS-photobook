@@ -20,6 +20,7 @@
   position: relative;
   width: 100%;
   height: 100%;
+  margin-bottom: 40px;
 }
 .world__list{
 display: flex;
@@ -83,13 +84,14 @@ background: $lgrey;
 display: flex;
     align-items: center;
   }
+  .album__name{
+    margin: 0 20px 0 0;
+    color:$dgrey;
+    font-family: 'Proxima Nova Semibold';
+    font-size: 14px;
+  }
 }
-.album__name{
-margin: 0 20px 0 0;
-  color:$dgrey;
-  font-family: 'Proxima Nova Semibold';
-  font-size: 14px;
-}
+
 .album__name-text{
   color:$dgrey;
   position: relative;

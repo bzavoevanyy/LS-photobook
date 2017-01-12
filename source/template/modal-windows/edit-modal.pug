@@ -14,24 +14,24 @@ html
         <![endif]-->
     body
         .modal__window
-            .modal__header
+            .modal__header.modal__header_profile
                 .modal__title Редактировать профиль
-                svg.modal__close
+                svg.modal__close.modal__close_profile
                     use(xlink:href="assets/img/sprite.svg#close")
             .edit.edit_profile.modal__main
-                .edit__name
-                    .modal__desc Имя
+                .edit__name.edit__name_profile
+                    .modal__desc.modal__desc_profile Имя
                     textarea(rows=1 placeholder="Имя").edit__name-textarea.edit__name-textarea_profile.edit__name-textarea_profile_first
                     textarea(rows=1 placeholder="Фамилия").edit__name-textarea.edit__name-textarea_profile
-                .edit__desc.edit_album__desc
-                    .modal__desc.modal__desc_edit-photo Описание
+                .edit__desc.edit_album__desc.edit__desc_profile
+                    .modal__desc.modal__desc_edit-desc.modal__desc_profile О себе
                     textarea(placeholder="Я веб разработчик.").edit__name-textarea.edit__name-textarea_desc
                 .edit__upload-cover.edit__upload-cover_profile
                     .cover-small
                         img(src="#").cover-image
                     .btn_save.btn Загрузить фотографию
                     .edit__upload-cover-note (файл должен быть размером не более 512 КБ)
-                .edit__upload-cover.edit__upload-cover_profile-bottom
+                .edit__upload-cover.edit__upload-cover_profile.edit__upload-cover_profile-bottom
                     .cover-small
                         img(src="#").cover-image
                     .edit__upload-cover-btn.btn Загрузить фон
@@ -39,22 +39,18 @@ html
                 .horizontal-line-profile
                 .edit__profile-links
                     .edit__name.edit__name_profile-links
-                        .modal__desc.modal__desc_profile-links Вконтакте
-                        textarea(rows=1 placeholder="https://vk.com").edit__name-textarea.edit__name-textarea_profile
+                        .modal__desc.modal__desc_profile-link Вконтакте
+                        textarea(rows=1 placeholder="https://vk.com").edit__name-textarea.edit__name-textarea_link
                     .edit__name.edit__name_profile-links
-                        .modal__desc.modal__desc_profile-links Facebook
-                        textarea(rows=1 placeholder="https://facebook.com").edit__name-textarea.edit__name-textarea_profile
+                        .modal__desc.modal__desc_profile-link Facebook
+                        textarea(rows=1 placeholder="https://facebook.com").edit__name-textarea.edit__name-textarea_link
                     .edit__name.edit__name_profile-links
-                        .modal__desc.modal__desc_profile-links Email
-                        textarea(rows=1 placeholder="gmail.com").edit__name-textarea.edit__name-textarea_profile
+                        .modal__desc.modal__desc_profile-link Email
+                        textarea(rows=1 placeholder="gmail.com").edit__name-textarea.edit__name-textarea_link
                     .edit__name.edit__name_profile-links
-                        .modal__desc.modal__desc_profile-links Twitter
-                        textarea(rows=1 placeholder="https://twitter.com").edit__name-textarea.edit__name-textarea_profile
+                        .modal__desc.modal__desc_profile-link Twitter
+                        textarea(rows=1 placeholder="https://twitter.com").edit__name-textarea.edit__name-textarea_link
             .modal__footer
                 .modal__footer-left
                     .btn.btn_save Сохранить
                     .modal__cancel Отменить
-                .modal__footer-right
-                    .btn.btn_delete Удалить
-                        svg.btn-delete__image
-                            use(xlink:href="assets/img/sprite.svg#delete")

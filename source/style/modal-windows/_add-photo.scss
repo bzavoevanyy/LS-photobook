@@ -1,6 +1,27 @@
 .add-photo {
 
-  &__add-field_added-photo {
+  &_added {
+    @include tablet {
+      min-height: 550px;
+    }
+
+    @media (max-width: 480px) {
+      min-height: 500px;
+    }
+  }
+
+  &__main_added {
+
+    @include tablet {
+      min-height: 416px;
+    }
+
+    @media (max-width: 480px) {
+      min-height: 365px;
+    }
+  }
+
+  &__add-field_added {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -11,6 +32,15 @@
     color: rgba(50, 50, 50, 0.6);
     border: 3px dashed #f2f2f2;
     padding: 16px 0 0 16px;
+
+    @include tablet {
+      min-height: 285px;
+    }
+
+    @media (max-width: 480px) {
+      min-height: 285px;
+      padding: 26px 0 0 8px;
+    }
   }
 
   &__photo {
@@ -21,8 +51,27 @@
     background-size: cover;
     margin: 0 20px 20px 0;
 
+    @include tablet {
+      width: 114px;
+      height: 114px;
+    }
+
+    @media (max-width: 480px) {
+      width: 60px;
+      height: 60px;
+      margin: 0 6px 8px 0;
+    }
+
     &:nth-child(4n) {
       margin-right: 0;
+
+      @media (max-width: 600px) {
+        margin-right: 20px;
+      }
+
+      @media (max-width: 480px) {
+        margin-right: 6px;
+      }
     }
   }
 
@@ -40,6 +89,13 @@
     border: 2px solid #fff;
     cursor: pointer;
 
+    @media (max-width: 480px) {
+      top: -7px;
+      right: -7px;
+      width: 14px;
+      height: 14px;
+    }
+
     &:hover {
       background: #d94130;
     }
@@ -49,6 +105,11 @@
     width: 10px;
     height: 10px;
     fill: #fff;
+
+    @media (max-width: 480px) {
+      width: 5px;
+      height: 5px;
+    }
   }
 }
 

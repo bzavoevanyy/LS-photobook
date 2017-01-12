@@ -2,7 +2,22 @@
   min-height: 318px;
   padding-bottom: 25px;
 
+  &-header {
+    @media (max-width: 340px) {
+      padding: 18px 14px 18px 8px;
+      height: 68px;
+    }
+  }
+
+  &-close {
+    @media (max-width: 340px) {
+      top: 5px;
+      left: 0;
+    }
+  }
+
   &__desc {
+    justify-content: flex-end;
     margin-bottom: 18px;
   }
 }
@@ -12,6 +27,15 @@
   justify-content: flex-start;
   align-items: flex-start;
   width: 582px;
+
+  @include tablet {
+    width: 482px;
+  }
+
+  @media (max-width: 550px) {
+    flex-wrap: wrap;
+    width: 100%;
+  }
 
   &-btn {
     color: #26bff9;
@@ -30,6 +54,10 @@
     line-height: 16px;
     font-style: italic;
     padding-top: 5px;
+
+    @media (max-width: 500px) {
+      margin-left: 75px;
+    }
   }
 }
 

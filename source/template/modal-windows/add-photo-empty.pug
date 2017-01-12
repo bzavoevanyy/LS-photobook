@@ -14,9 +14,9 @@ html
         <![endif]-->
     body
         .add-photo.modal__window
-            .modal__header
+            .add-photo__header.modal__header
                 .modal__title Добавить фотографии
-                svg.modal__close
+                svg.add-photo__close.modal__close
                     use(xlink:href="assets/img/sprite.svg#close")
             .add-photo__main.modal__main
                 .add-photo__main-header
@@ -29,8 +29,9 @@ html
                     .add-field__desc
                         | Перетащите фото сюда или
                         span.add-field__file  выберите файл
+                    .add-field__btn.btn.btn_close Выберите файл
                 .add-photo__error Выбран неверный формат изображения. Попробуйте снова
-            .modal__footer
+            .add-photo__footer.modal__footer
                 .modal__footer-left
                     .btn.btn_save Сохранить
                     .modal__cancel Отменить

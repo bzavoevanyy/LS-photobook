@@ -1,13 +1,69 @@
 .edit_profile {
   min-height: 645px;
+
+  @media (max-width: 600px) {
+    padding: 24px 8px 22px;
+  }
 }
 
-.edit__name-textarea_profile {
+.modal__header_profile {
+  padding: 20px 8px;
+}
+
+.modal__close_profile {
+  @media (max-width: 340px) {
+    top: 0;
+  }
+}
+
+.modal__desc_profile {
+  @media (max-width: 600px) {
+    margin-bottom: 5px;
+  }
+}
+
+.edit__name_profile {
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 5px;
+  }
+}
+
+.edit__name-textarea_profile, .edit__name-textarea_link {
   min-height: 40px;
   width: 246px;
 
+  @include phone {
+    width: 280px;
+  }
+}
+
+.edit__name-textarea_profile {
+
+  @include tablet {
+    width: 216px;
+  }
+
+  @media (max-width: 600px) {
+    width: 95%;
+  }
+
   &_first {
     margin-right: 20px;
+
+    @media (max-width: 600px) {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.edit__desc_profile {
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
@@ -16,6 +72,13 @@
 
   &-bottom {
     margin-bottom: 25px;
+  }
+
+  @include tablet {
+  }
+
+  @media (max-width: 600px) {
+    flex-wrap: wrap;
   }
 }
 
@@ -35,10 +98,20 @@
 }
 
 .edit__name_profile-links {
+  justify-content: flex-start;
   margin-bottom: 8px;
+
+  @media (max-width: 600px) {
+    margin-bottom: 12px;
+  }
 }
 
-.modal__desc_profile-links {
+.modal__desc_profile-link {
   text-align: right;
   min-width: 80px;
+
+  @media (max-width: 600px) {
+    margin-bottom: 5px;
+    text-align: left;
+  }
 }

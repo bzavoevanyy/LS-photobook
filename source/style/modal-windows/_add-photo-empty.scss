@@ -4,13 +4,53 @@
   justify-content: space-between;
   min-height: 594px;
 
+  @include phone {
+    min-height: 500px;
+  }
+
+  &__header {
+
+    @media (max-width: 340px) {
+      padding: 18px 14px 18px 8px;
+      height: 68px;
+    }
+  }
+
+  &__close {
+
+    @media (max-width: 340px) {
+      top: 5px;
+      left: 0;
+    }
+  }
+
   &__main {
     min-height: 460px;
     padding: 32px 22px 10px;
 
+    @include phone {
+      min-height: 365px;
+      padding: 22px 9px 20px 8px;
+    }
+
     &-header {
       display: flex;
       margin-bottom: 35px;
+
+      @include phone {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__title {
+
+    @include tablet {
+      margin-right: 18px;
+    }
+
+    @include phone {
+      margin-right: 28px;
     }
   }
 
@@ -24,12 +64,20 @@
     background: #f9f9f9;
     color: rgba(50, 50, 50, 0.6);
     border: 3px dashed #f2f2f2;
+
+    @include phone {
+      min-height: 285px;
+    }
   }
 
   .add-field {
 
     &__desc {
       width: 180px;
+
+      @include phone {
+        display: none;
+      }
     }
 
     &__file {
@@ -39,6 +87,10 @@
       &:hover {
         color: #20b6ed;
       }
+
+      @include phone {
+        display: none;
+      }
     }
 
     &__image {
@@ -46,6 +98,21 @@
       height: 32px;
       fill: #d0d0d0;
       margin-bottom: 10px;
+
+      @include phone {
+        margin-bottom: 5px;
+      }
+    }
+
+    &__btn {
+      display: none;
+
+      @include phone {
+        display: block;
+        padding: 8px 9px;
+        font-size: 16px;
+        font-weight: 500;
+      }
     }
   }
 
@@ -60,8 +127,18 @@
     margin: 20px 0 19px;
     padding: 5px 11px;
 
+    @include phone {
+      margin-bottom: 10px;
+    }
+
     &_active {
       display: block;
+    }
+  }
+
+  &__footer {
+    @include phone {
+      padding-left: 20px;
     }
   }
 }

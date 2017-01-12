@@ -5,6 +5,18 @@
     border-radius: 4px;
     box-shadow: 1px 0 2px #c4c4c4;
     overflow: hidden;
+
+    @include tablet {
+      width: 596px;
+    }
+
+    @media (max-width: 600px) {
+      width: 100%;
+    }
+
+    @include phone {
+      width: 300px;
+    }
   }
 
   &__header {
@@ -13,6 +25,10 @@
     height: 67px;
     padding: 20px 18px;
     background: #f1f1f1;
+
+    @media (max-width: 340px) {
+      padding: 6px 6px;
+    }
   }
 
   &__title {
@@ -21,6 +37,10 @@
     font-family: Panton;
     font-weight: 700;
     color: #323232;
+
+    @media (max-width: 340px) {
+      line-height: 28px;
+    }
   }
 
   &__close {
@@ -28,6 +48,14 @@
     height: 26px;
     fill: #a0a09f;
     cursor: pointer;
+
+    @media (max-width: 340px) {
+      position: relative;
+      width: 21px;
+      height: 20px;
+      top: 18px;
+      left: -4px;
+    }
 
     &:hover {
       fill: #323232;
@@ -48,10 +76,28 @@
     font-weight: 600;
     color: #323232;
     margin-right: 20px;
+
+    @include tablet {
+      margin-right: 25px;
+    }
+
+    @include phone {
+      font-size: 14px;
+    }
+
+    &_edit {
+      @media (max-width: 480px) {
+        margin-bottom: 5px;
+      }
+    }
   }
 
   &__text {
     font-weight: 300;
+
+    @include phone {
+      font-size: 14px;
+    }
   }
 
   &__footer {
@@ -61,6 +107,10 @@
     height: 67px;
     padding: 14px 20px 13px;
     background: #f1f1f1;
+
+    @media (max-width: 380px) {
+      padding: 14px 10px 13px;
+    }
 
     &-left {
       display: flex;
@@ -122,6 +172,11 @@
     &:hover {
       background: #d94130;
     }
+
+    @media (max-width: 380px) {
+      padding: 8px 20px;
+      text-indent: -9999px;
+    }
   }
 
   &-delete__image {
@@ -129,7 +184,11 @@
     top: 10px;
     left: 20px;
     width: 12px;
-    height: 16px;
+    height: 18px;
     fill: #fff;
+
+    @media (max-width: 380px) {
+      left: 14px;
+    }
   }
 }

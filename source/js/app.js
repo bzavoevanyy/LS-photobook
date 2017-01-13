@@ -1,8 +1,8 @@
 'use strict';
 
-
 let ready = () => {
   console.log('Page ready');
+
 
 };
 

@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "author": "LS-webadvanced__group3",
   "license": "ISC",
-  "scripts": {
-  },
+  "scripts": {},
   "devDependencies": {
     "babel-core": "^6.18.2",
     "babel-loader": "^6.2.9",
@@ -46,6 +45,7 @@
     "morgan": "^1.7.0",
     "normalize.css": "^4.2.0",
     "passport": "^0.3.2",
+    "passport-http": "^0.3.0",
     "passport-local": "^1.0.0"
   }
 }

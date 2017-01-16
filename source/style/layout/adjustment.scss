@@ -13,7 +13,7 @@ html, body {
   width: 100%;
   height: 100%;
   font-family: 'ProximaNova-Light', sans-serif;
-  line-height: 1.42;
+  line-height: 1.52;
 }
 
 body {
@@ -46,7 +46,18 @@ a{
 .content{
   height: 100%;
   margin: 0 auto;
-  width: 100%;
-  max-width: 1200px;
+
+  @include desktop {
+    width: 1800px;
+  }
+  @include laptop{
+    width: 1200px;
+  }
+  @include tablet {
+    width: 750px;
+  }
+  @include phone {
+    width: 95%;
+  }
 }
 

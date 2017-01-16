@@ -4,24 +4,38 @@
   height: 100vh;
   background: url('/assets/img/bg.jpg') 50% no-repeat;
 background-size: cover;
+
 }
 .login__top{
+  @include phone {
+    height: 80%;
+  }
   width: 100%;
   height: 95%;
 }
 .login__down{
+  @include phone {
+    height: 7%;
+    margin-top: 40px;
+  }
   height: 5%;
   width: 100%;
   bottom: 0;
 }
 .login__down-text{
-  color:#fff;
+  color:$white;
   text-align: center;
 }
 .form{
+  @include tablet {
+    width: 310px;
+  }
+  @include phone {
+    width: 350px;
+  }
   width: 280px;
  flex-flow: column wrap;
-  background: #fff;
+  background:$white;
   border-radius: 10%;
   display: flex;
   box-sizing: border-box;
@@ -30,6 +44,12 @@ background-size: cover;
   font-size: 14px;
 }
 .form-block{
+  @include tablet {
+    height: 45px;
+  }
+  @include phone {
+    height: 50px;
+  }
   display: flex;
   flex:1;
   height: 40px;
@@ -75,6 +95,13 @@ background:#ffe3e3;
 }
 
 .button{
+  @include tablet {
+    height: 45px;
+    width: 260px;
+  }
+  @include phone {
+    width: 310px;
+  }
 background:#28bbef;
   color: #fff;
   height: 43px;
@@ -97,6 +124,12 @@ text-decoration: none;
   margin: 10px 5px;
 }
 .login__title{
+  @include tablet {
+   font-size: 48px;
+  }
+  @include phone {
+   font-size: 36px;
+  }
   color: #fff;
   width: 100%;
   font-family: 'Panton-Bold';
@@ -105,19 +138,33 @@ text-decoration: none;
   margin-bottom: 15px;
 }
 .login__text{
+  @include tablet {
+    font-size: 18px;
+  }
+  @include phone {
+
+  }
   color:#fff;
   width: 100%;
   text-align: center;
   margin-bottom: 30px;
 }
 .flip-container {
+  @include tablet {
+    width:590px;
+    height: 380px;
+  }
+  @include phone {
+    width:370px;
+    height: 380px
+  }
   perspective: 1000px;
   margin: 0 auto;
   width:560px;
   height: 365px;
   position: relative;
-  top:20%;
-  transform:translateY(-20%);
+  top:50%;
+  transform:translateY(-50%);
 
 
 }
@@ -127,6 +174,13 @@ text-decoration: none;
 }
 
 .flip-container, .front, .back {
+  @include tablet {
+    width:370px;
+    height: 380px;
+  }
+  @include phone {
+
+  }
   width: 560px;
   height: 365px;
 }
@@ -163,12 +217,12 @@ text-decoration: none;
   width: 40px;
   height: 40px;
   text-align: center;
-  margin-left: 20px;
+  margin-left: 10px;
   .svg{
     position: relative;
     top:30%;
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     fill:#cdcdcd;
   }
 }

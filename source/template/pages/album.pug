@@ -20,39 +20,41 @@ block content
                         .album
                             .album__name Лесные прогулки
                             .album__discription Фотографии природы леса,енотов,оленей.Как приятно сойти на дальней станции и пройтись по полю босиком.И чтобы никто не беспокоил, бродить не спеша, влюбленным в эту тишину. Запах елей, сосен будоражит
-                        .edit
-                            .edit-wrap
+                        .edit.album
+                            .edit-wrap.home
                                 .svg-wrap
                                     svg(role="img" class="svg")
-                                        use( xlink:href="/assets/img/sprite.svg#home")
-                                .home-hover
-                                    a(href='photo_main.html' class='hover-link')
-                                        .home-hover__block
-                                            .svg-wrap
-                                                svg(role="img" class="svg")
-                                                    use( xlink:href="/assets/img/sprite.svg#home")
-                                            .edit-hover__text На главную
-                            .edit-wrap
+                                        use(xlink:href="/assets/img/sprite.svg#home")
+                                a(href='photo_main.html' class='hover-link')
+                                    .edit-hover__text На главную
+                            .edit-wrap.edit
                                 .svg-wrap
                                     svg(role="img" class="svg")
                                         use( xlink:href="/assets/img/sprite.svg#edit")
-                                .edit-hover.album
-                                    a(href='#' class='hover-link')
-                                        .edit-hover__block
-                                            .svg-wrap
-                                                svg(role="img" class="svg")
-                                                    use( xlink:href="/assets/img/sprite.svg#edit")
-                                            .edit-hover__text Редактировать
+                                a(href='#' class='hover-link')
+                                    .edit-hover__text Редактировать
 
             .header__down
                 .content-down.all
                         .all
+                            .all__icons
+                                .svg-wrap
+                                    svg(role="img" class="svg")
+                                        use( xlink:href="/assets/img/sprite.svg#cam")
                             .all__photo
                                 .photo__quant 1
                                 .all__photo-text Фотографий
+                            .all__icons
+                                .svg-wrap
+                                    svg(role="img" class="svg")
+                                        use( xlink:href="/assets/img/sprite.svg#like")
                             .all__likes
                                 .likes__quant 1
                                 .all__likes-text Лайков
+                            .all__icons
+                                .svg-wrap
+                                    svg(role="img" class="svg")
+                                        use( xlink:href="/assets/img/sprite.svg#comments")
                             .all__comments
                                 .comments__quant 1
                                 .all__comments-text Комментариев
@@ -65,13 +67,8 @@ block content
                         .svg-wrap
                             svg(role="img" class="svg")
                                 use( xlink:href="/assets/img/sprite.svg#add")
-                        .add-hover
-                            a(href='#' class='hover-link')
-                                .add-hover__block
-                                    .svg-wrap
-                                        svg(role="img" class="svg")
-                                            use( xlink:href="/assets/img/sprite.svg#add")
-                                    .add-hover__text Добавить
+                        a(href='#' class='hover-link')
+                            .edit-hover__text Добавить
                 .album-photo__container
                     ul.album-photo__list
                         li(class='album-photo__item')

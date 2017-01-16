@@ -4,10 +4,19 @@
 
 }
 .myalbum__title{
+  @include tablet {
+    font-size: 48px;
+  }
+  @include phone {
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 50px;
+
+  }
   width: 100%;
   font-family: 'Panton-Bold';
   height: 50px;
-  font-size: 35px;
+  font-size: 42px;
   text-align: left;
   position: relative;
   top:30px;
@@ -22,42 +31,85 @@
   margin-bottom: 60px;
 }
 .myalbum__list{
+  @include tablet {
+
+  }
+  @include phone {
+    margin:0 auto;
+  }
   display: flex;
-  margin: -1em 0 0 -1em;
-  flex-flow:  wrap;
+  position: relative;
+  //margin: 0 auto;
+  margin: 0 0 0 -1em;
+  flex-flow: row wrap;
 }
 .myalbum__item{
+
+  @include tablet {
+    width: 260px;
+  }
+  @include phone {
+    width: 370px;
+    margin: 0 auto 20px;
+  }
   display: flex;
   flex-direction: column;
-  width: 275px;
+  width: 280px;
   overflow: hidden;
+  border-radius: 3px;
   margin-bottom: 20px;
   margin-left: 20px;
   margin-top: 20px;
   vertical-align:top;
   box-shadow: 0 0 7px rgba(0,0,0,0.5);
+
 }
 .myalbum__top{
-  height: 280px;
+  @include tablet {
+    height: 255px;
+  }
+  @include phone {
+    width: 370px;
+    height: 370px;
+  }
+  height: 278px;
   display: flex;
   width: 100%;
   background: url("/assets/img/bg.jpg")  50% no-repeat;
   background-size: cover;
   position: relative;
+
 }
 
 .myalbum__down{
-  height: 50px;
+  @include tablet {
+  }
+  @include phone {
+    height: 63px;
+
+  }
+  height: 52px;
   width: 100%;
-  background:#fff;
+  background:$white;
   display: flex;
   justify-content: space-between;
   .svg-wrap{
+    margin-left: 10px;
     height: 100%;
+  }
+  .svg{
+    width: 20px;
+    height: 20px;
+    fill:$dgrey;
   }
 
 }
 .user-album{
+  @include tablet {
+  }
+  @include phone {
+   text-align: right;
+  }
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -67,7 +119,7 @@
   .album__name{
     font-family: "Proxima Nova Semibold";
    margin: 0 20px 0;
-    font-size: 14px;
+    font-size: 16px;
     color: $black;
   }
 }
@@ -83,72 +135,52 @@
   box-shadow: 0 0 7px rgba(0,0,0,0.5);
   cursor: pointer;
 }
-.home-hover{
-  display: none;
-  position: absolute;
-  background: $blue;
-  top: 20px;
-  height: 40px;
-  z-index: 10;
-  right: 0;
-  border-radius: 23px;
-  .svg-wrap{
-    margin: 0 0 5px;
-    .svg{
-      fill:$white;
-    }
-  }
-  .edit-hover__text{
-    font-family: "Panton-Bold";
-    color: $white;
-    font-size: 10px;
-    width: 60px;
-  }
 
-}
-.home-hover__block{
-  height: 40px;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: center;
-
-}
-
-.home-hover:before{
-  content: "";
-  display: block;
-  position: absolute;
-  height: 40px;
-}
-
-.edit-wrap:hover .home-hover {
-  display: block;
-}
 .myalbum-hover{
-  display: none;
+  //display: none;
   position: absolute;
   background:$black;
   opacity: 0.7;
-  top: 0;
-  height: 100%;
+  top: 100%;
+  height: 0;
   width: 100%;
   z-index: 10;
   right: 0;
-
+  transition: all 0.3s ease;
 }
 
 .myalbum-hover__block{
+  @include tablet {
+    flex-flow: column wrap;
+  }
+  @include phone {
+    //justify-content: center;
+    flex-flow: column wrap;
+  }
   display: flex;
   height: 100%;
   width: 100%;
   justify-content: flex-end;
   align-items:flex-start;
-  flex-flow: column;
+  flex-flow: column wrap;
+  transition: all 0.3s ease;
   .album__discription{
+    @include phone {
+      margin-bottom: 50px;
+    }
     margin-left: 30px;
   }
   .all{
+    @include tablet {
+      margin-left: 30px;
+    }
+    @include phone {
+      display: flex;
+      justify-content: flex-start;
+      text-align: left;
+      width: 100%;
+      height: 70px;
+    }
     position: relative;
     bottom: 35px;
   }
@@ -157,6 +189,7 @@
     font-family: "Panton-Bold";
   }
   .all__photo-text{
+    display: block;
     color:$white;
   }
 }
@@ -169,5 +202,18 @@
   align-items: center;
 }
 .myalbum__top:hover .myalbum-hover {
-  display: block;
+  //display: block;
+  top:0;
+  height: 100%;
+}
+.svg-wrap.user{
+  display: none;
+  @include tablet {
+
+  }
+  @include phone {
+   display: block;
+    margin-top: 5px;
+    margin-left: 20px;
+  }
 }

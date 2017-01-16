@@ -9,16 +9,20 @@ $black: #050a0d;
     @content
   }
 }
-
+@mixin laptop {
+  @media (max-width: 1400px) {
+    @content
+  }
+}
 @mixin tablet {
   @media (max-width: 900px) {
-    @content
+  @content
   }
 }
 
 @mixin phone {
   @media (max-width: 568px) {
-    @content
+  @content
   }
 }
 

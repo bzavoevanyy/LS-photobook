@@ -18,7 +18,7 @@ block content
                             .user__inf
                                 .user__name Фамилия Имя
                                 .user__text Я веб разработчик. Мне 24 года. Люблю путешествия, кодинг, фриланс и актвный отдых.
-                                  ul.user__icons-list
+                                ul.user__icons-list
                                     li.user__icons-item
                                         a(href='#').user__icons-link
                                             svg(role="img" class="svg")
@@ -40,17 +40,12 @@ block content
                                             svg(role="img" class="svg")
                                                 use( xlink:href="/assets/img/sprite.svg#soc_email")
                         .edit
-                            .edit-wrap
+                            .edit-wrap.home
                                 .svg-wrap
                                     svg(role="img" class="svg")
                                         use( xlink:href="/assets/img/sprite.svg#home")
-                                .home-hover
-                                    a(href='album.html' class='hover-link')
-                                        .home-hover__block
-                                            .svg-wrap
-                                                svg(role="img" class="svg")
-                                                    use( xlink:href="/assets/img/sprite.svg#home")
-                                            .edit-hover__text На главную
+                                a(href='album.html' class='hover-link')
+                                    .edit-hover__text На главную
             .header__down
                 .content-down
                     .search
@@ -76,6 +71,10 @@ block content
                                                 .photo__quant 7
                                                 .all__photo-text Фотографий
                             .myalbum__down
+                                a(href='#' class='edit-link')
+                                    .svg-wrap.user
+                                        svg(role="img" class="svg")
+                                            use( xlink:href="/assets/img/sprite.svg#edit")
                                 .user-album
                                     .album__name Горы
         .footer

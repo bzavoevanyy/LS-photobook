@@ -1,4 +1,9 @@
 .world{
+  @include tablet {
+  }
+  @include phone {
+    //margin: 20px 0  0;
+  }
   width: 100%;
   height: 100%;
   margin-top: 50px;
@@ -6,11 +11,21 @@
   background: $white;
 }
 .world__title{
+  @include tablet {
+
+  }
+  @include phone {
+    height: 10%;
+    font-size: 38px;
+    text-align: center;
+    margin: 0 0 45px;
+  }
   width: 100%;
   font-family: 'Panton-Bold';
-  font-size: 35px;
+  font-size: 42px;
   text-align: left;
-  margin-bottom: 40px;
+  margin-left: 20px;
+  margin-bottom: 22px;
   .svg-wrap{
     display: flex;
     align-items: center;
@@ -20,12 +35,14 @@
   position: relative;
   width: 100%;
   height: 100%;
-  margin-bottom: 40px;
+  //margin: 0 auto;
+  //margin-bottom: 40px;
 }
 .world__list{
 display: flex;
   flex-flow: wrap;
-  margin: -1em 0 0 -1em;
+ // margin: 0 auto;
+  //margin: -1em 0 0 -1em;
 }
 .world__item{
   display: flex;
@@ -65,11 +82,25 @@ width: 100%;
 
 }
 .world__down-inf{
+  @include tablet {
+
+  }
+  @include phone {
+   justify-content: center;
+
+  }
   width: 100%;
   height: 90px;
   display: flex;
   flex-flow: column wrap;
   .user__avatar.small{
+    @include tablet {
+
+    }
+    @include phone {
+    margin-top: 10px;
+
+    }
     margin-left: 5px;
   }
 
@@ -129,6 +160,12 @@ color: $blue;
   }
 }
 .user__avatar.small{
+  @include tablet {
+
+  }
+  @include phone {
+
+  }
   width: 80px;
   height: 100%;
   margin-left: 20px;
@@ -209,91 +246,7 @@ position: relative;
     margin: 0;
   }
 }
-.edit-hover{
-  display: none;
-  position: absolute;
-  background: $blue;
-  top: 20px;
-  height: 40px;
-  z-index: 10;
-  right: 0;
-  border-radius: 23px;
-.svg-wrap{
-  margin: 0 0 5px;
-  .svg{
-    fill:$white;
-  }
-}
 
-}
-.edit-hover__block{
-  height: 40px;
-  display: flex;
-flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: center;
-}
-.edit-hover__text{
-  font-family: "Panton-Bold";
-  color: $white;
-  font-size: 10px;
-  margin-right: 20px;
-
-}
-.edit-hover:before{
-  content: "";
-  display: block;
-  position: absolute;
-  height: 40px;
-
-}
-
-.edit-wrap:hover .edit-hover {
-  display: block;
-}
-
-.goout-hover{
-  display: none;
-  position: absolute;
-  background: $blue;
-  top: 70px;
-  height: 40px;
-  z-index: 10;
-  right: 0;
-  border-radius: 23px;
-  .svg-wrap{
-    margin: 0 0 5px;
-    .svg{
-      fill:$white;
-    }
-  }
-
-}
-.goout-hover__block{
-  height: 40px;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: center;
-}
-.goout-hover__text{
-  font-family: "Panton-Bold";
-  color: $white;
-  font-size: 10px;
-  margin-right: 10px;
-
-}
-.goout-hover:before{
-  content: "";
-  display: block;
-  position: absolute;
-  height: 40px;
-
-}
-
-.edit-wrap:hover .goout-hover {
-  display: block;
-}
 .world-hover{
   display: none;
   position: absolute;

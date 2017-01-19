@@ -14,6 +14,7 @@
   background:url("/assets/img/bg.jpg") center  no-repeat;
   background-color: $dgrey;
   background-size: cover;
+  //z-index: 1;
 }
 .header__top{
   @include tablet {
@@ -233,4 +234,65 @@
   border: none;
   outline:none;
   width: 50%;
+}
+//header-fixed
+.header-fixed{
+  display: none;
+  width: 100%;
+  height: 60px;
+  background: $lgrey;
+  z-index: 9999;
+
+}
+.top{
+  position: fixed;
+  display: block;
+}
+.fixed-wrap{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  flex:1;
+  justify-content: space-between;
+  .album{
+    margin: 0 auto;
+  }
+  .album__name{
+    margin: 0;
+    color: $black;
+  }
+  .user-block{
+    margin: 0;
+    .user__avatar-img.small{
+      width: 50px;
+      height: 50px;
+      margin-bottom: 5px;
+    }
+  }
+  .edit-wrap.home{
+    margin: 0;
+  }
+  .user__name{
+    margin: 0;
+    color:$black;
+  }
+
+}
+.header-error{
+  width: 480px;
+  height: 40px;
+  background: $white;
+  position: absolute;
+  top: 0;
+  right: 70px;
+  display: none;
+  z-index: 9999;
+  text-align: center;
+
+}
+
+.header-error__text{
+  margin-top: 10px;
+  font-size: 14px;
 }

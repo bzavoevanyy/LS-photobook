@@ -315,15 +315,16 @@ color: $black;
 }
 .img-hover{
 
-display: none;
+//display: none;
 position: absolute;
 background: $black;
 opacity: 0.8;
-top: 0;
-height: 100%;
-  width: 100%;
   z-index: 10;
-right: 0;
+ right: 0;
+  top: -100%;
+  height: 0;
+  width: 100%;
+  transition: all 0.4s linear;
 .svg-wrap{
   width: 55px;
   height: 55px;
@@ -344,6 +345,9 @@ right: 0;
 }
 .album-photo__top:hover .img-hover {
   display: block;
+  top:0;
+  height: 100%;
+
 }
 .img-hover__block{
   height: 100%;

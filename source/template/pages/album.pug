@@ -7,6 +7,7 @@ block variables
 block content
     include ../commons/index/index_content
     .wrapper
+        include ../commons/edit_header_album
         .header
             .header__top
                 .content
@@ -31,9 +32,8 @@ block content
                                 .svg-wrap
                                     svg(role="img" class="svg")
                                         use( xlink:href="/assets/img/sprite.svg#edit")
-                                a(href='#' class='hover-link')
+                                a(href='#' class='hover-link' id='toggle')
                                     .edit-hover__text Редактировать
-
             .header__down
                 .content-down.all
                         .all
@@ -58,6 +58,24 @@ block content
                             .all__comments
                                 .comments__quant 1
                                 .all__comments-text Комментариев
+            .header-fixed
+                .content
+                  .fixed-wrap
+                    .user-block
+                        div(class='user__avatar small')
+                            div(class='user__avatar-img small' style="background-image:url('/assets/img/user.jpg');")
+                                img.avatar-pic(src="/assets/img/user.jpg" alt="")
+                        .user__inf
+                           .user__name Фамилия Имя
+                    .album
+                        .album__name Лесные прогулки
+                    .edit.album
+                        .edit-wrap.home
+                            .svg-wrap
+                                svg(role="img" class="svg")
+                                    use(xlink:href="/assets/img/sprite.svg#home")
+                            a(href='photo_main.html' class='hover-link')
+                                    .edit-hover__text На главную
         section.album-photo
             .content
                 .noalbum
@@ -70,136 +88,5 @@ block content
                         a(href='#' class='hover-link')
                             .edit-hover__text Добавить
                 .album-photo__container
-                    ul.album-photo__list
-                        li(class='album-photo__item')
-                            .album-photo__top
-                                .album-photo__img
-                                    .img-hover
-                                        a(href='#' class='hover-link')
-                                          .img-hover__block
-                                            svg(role="img" class="svg")
-                                                use( xlink:href="/assets/img/sprite.svg#loupe")
-                                .comments.album
-                                    a(href='#' class='comments-link')
-                                        .comments__note
-                                            .svg-wrap
-                                                svg(role="img" class="svg")
-                                                    use( xlink:href="/assets/img/sprite.svg#comments")
-                                    .comments__quant 1
-                                    a(href="#" class="likes-link")
-                                        .likes
-                                            .svg-wrap
-                                                svg(role="img" class="svg")
-                                                    use( xlink:href="/assets/img/sprite.svg#like")
-                                    .likes__quant 1
-                            .album-photo__down
-                                a(href="#" class="edit-link")
-                                    .svg-wrap
-                                        svg(role="img" class="svg")
-                                            use( xlink:href="/assets/img/sprite.svg#edit")
-                                .photo__name
-                                    a(href="#")
-                                        .photo__name-text Горы
-                        li(class='album-photo__item')
-                            .album-photo__top
-                                .album-photo__img
-                                    .img-hover
-                                        a(href='#' class='hover-link')
-                                            .img-hover__block
-                                                svg(role="img" class="svg")
-                                                    use( xlink:href="/assets/img/sprite.svg#loupe")
-                                .comments.album
-                                    a(href='#' class='comments-link')
-                                        .comments__note
-                                            .svg-wrap
-                                                svg(role="img" class="svg")
-                                                    use( xlink:href="/assets/img/sprite.svg#comments")
-                                    .comments__quant 1
-                                    a(href="#" class="likes-link")
-                                        .likes
-                                            .svg-wrap
-                                                svg(role="img" class="svg")
-                                                    use( xlink:href="/assets/img/sprite.svg#like")
-                                    .likes__quant 1
-                            .album-photo__down
-                                a(href="#" class="edit-link")
-                                    .svg-wrap
-                                        svg(role="img" class="svg")
-                                            use( xlink:href="/assets/img/sprite.svg#edit")
-                                .photo__name
-                                    a(href="#")
-                                        .photo__name-text Горы
-                        li(class='album-photo__item')
-                            .album-photo__top
-                                .album-photo__img
-                                    .img-hover
-                                        a(href='#' class='hover-link')
-                                            .img-hover__block
-                                                svg(role="img" class="svg")
-                                                    use( xlink:href="/assets/img/sprite.svg#loupe")
-                                .comments.album
-                                    a(href='#' class='comments-link')
-                                        .comments__note
-                                            .svg-wrap
-                                                svg(role="img" class="svg")
-                                                    use( xlink:href="/assets/img/sprite.svg#comments")
-                                    .comments__quant 1
-                                    a(href="#" class="likes-link")
-                                        .likes
-                                            .svg-wrap
-                                                svg(role="img" class="svg")
-                                                    use( xlink:href="/assets/img/sprite.svg#like")
-                                    .likes__quant 1
-                            .album-photo__down
-                                a(href="#" class="edit-link")
-                                    .svg-wrap
-                                        svg(role="img" class="svg")
-                                            use( xlink:href="/assets/img/sprite.svg#edit")
-                                .photo__name
-                                    a(href="#")
-                                        .photo__name-text Горы
-                        li(class='album-photo__item')
-                            .album-photo__top
-                                .album-photo__img
-                                    .img-hover
-                                        a(href='#' class='hover-link')
-                                            .img-hover__block
-                                                svg(role="img" class="svg")
-                                                    use( xlink:href="/assets/img/sprite.svg#loupe")
-                                .comments.album
-                                    a(href='#' class='comments-link')
-                                        .comments__note
-                                            .svg-wrap
-                                                svg(role="img" class="svg")
-                                                    use( xlink:href="/assets/img/sprite.svg#comments")
-                                    .comments__quant 1
-                                    a(href="#" class="likes-link")
-                                        .likes
-                                            .svg-wrap
-                                                svg(role="img" class="svg")
-                                                    use( xlink:href="/assets/img/sprite.svg#like")
-                                    .likes__quant 1
-                            .album-photo__down
-                                a(href="#" class="edit-link")
-                                    .svg-wrap
-                                        svg(role="img" class="svg")
-                                            use( xlink:href="/assets/img/sprite.svg#edit")
-                                .photo__name
-                                    a(href="#")
-                                        .photo__name-text Горы
-
-        .footer
-            .footer-overlay
-                .content
-                    .footer-wrap
-                        .footer-block
-                            .footer-text Перед вами сервис ,который поможет вам организовать свои фотографии в альбом и поделиться ими со всем миром
-                        .footer-block
-                            a(href="").footer-arrow
-                                .svg-wrap
-                                    svg(role="img" class="svg")
-                                        use( xlink:href="/assets/img/sprite.svg#top")
-                        .footer-block
-                            .footer-autors 2017  Создано командой профессионалов на продвинутом курсе по веб-разработке в LoftSchool
-
-
+                    include ../commons/photo_list
+        include ../commons/footer

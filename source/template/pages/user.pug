@@ -60,36 +60,5 @@ block content
                     .noalbum-text Альбомы еще не созданы.Создайте альбомы с помощью кнопки доабвить
                 h2.myalbum__title Альбомы
                 .myalbum__container
-                    ul.myalbum__list
-                        li.myalbum__item
-                            .myalbum__top
-                                .myalbum-hover
-                                    a(href='#' class="hover-link")
-                                        .myalbum-hover__block
-                                            .album__discription Фотографии природы леса,енотов,оленей
-                                            .all
-                                                .photo__quant 7
-                                                .all__photo-text Фотографий
-                            .myalbum__down
-                                a(href='#' class='edit-link')
-                                    .svg-wrap.user
-                                        svg(role="img" class="svg")
-                                            use( xlink:href="/assets/img/sprite.svg#edit")
-                                .user-album
-                                    .album__name Горы
-        .footer
-            .footer-overlay
-                .content
-                    .footer-wrap
-                        .footer-block
-                            .footer-text Перед вами сервис ,который поможет вам организовать свои фотографии в альбом и поделиться ими со всем миром
-                        .footer-block
-                            a(href="").footer-arrow
-                                .svg-wrap
-                                    svg(role="img" class="svg")
-                                        use( xlink:href="/assets/img/sprite.svg#top")
-                        .footer-block
-                            .footer-autors 2017  Создано командой профессионалов на продвинутом курсе по веб-разработке в LoftSchool
-
-
-
+                   include ../commons/album_list
+        include ../commons/footer

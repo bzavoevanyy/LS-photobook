@@ -1,0 +1,84 @@
+.edit__header
+    .content
+        .edit__header-container
+            .edit__header-block
+                .user
+                    .user__avatar
+                        .user__avatar-img
+                            .svg-wrap
+                                svg(role="img" class="svg")
+                                    use( xlink:href="/assets/img/sprite.svg#cam")
+                            .user__avatar-text Изменить фото
+                    .user__inf
+                        form(action="#" method="POST" class="edit-form")
+                            .edit-form__block
+                                input(type="text" name ='name' class="name" placeholder="Имя")
+                            .edit-form__block
+                                textarea( name='about' class="about" placeholder="")
+                        ul.user__icons-list
+                            li.user__icons-item
+                                svg(role="img" class="svg")
+                                    use( xlink:href="/assets/img/sprite.svg#soc_vk")
+                                .contact__dropdown
+                                    .contact__dropdown-wrap.vk
+                                        form(action="#" method="POST" class="contact__dropdown-form")
+                                            .contact-form__block
+                                                input(type="text" name='vk' class="social" placeholder="")
+                                            .contakt-form__block
+                                                input(type="submit" class='save' value="Сохранить")
+                                                input(type="submit" class='cancel' value="Отменить")
+                            li.user__icons-item
+                                svg(role="img" class="svg" )
+                                    use( xlink:href="/assets/img/sprite.svg#soc_fb")
+                                .contact__dropdown
+                                    .contact__dropdown-wrap.fb
+                                        form(action="#" method="POST" class="contact__dropdown-form")
+                                            .contact-form__block
+                                                input(type="text" name='fb' class="social" placeholder="")
+                                            .contakt-form__block
+                                                input(type="submit" class='save' value="Сохранить")
+                                                input(type="submit" class='cancel' value="Отменить")
+                            li.user__icons-item
+                                svg(role="img" class="svg" )
+                                    use( xlink:href="/assets/img/sprite.svg#soc_twitter")
+                                .contact__dropdown
+                                    .contact__dropdown-wrap.tw
+                                        form(action="#" method="POST" class="contact__dropdown-form")
+                                            .contact-form__block
+                                                input(type="text" name='tw' class="social" placeholder="")
+                                            .contakt-form__block
+                                                input(type="submit" class='save' value="Сохранить")
+                                                input(type="submit" class='cancel' value="Отменить")
+                            li.user__icons-item
+                                svg(role="img" class="svg")
+                                    use( xlink:href="/assets/img/sprite.svg#social_google")
+                                .contact__dropdown
+                                    .contact__dropdown-wrap.google
+                                        form(action="#" method="POST" class="contact__dropdown-form")
+                                            .contact-form__block
+                                                input(type="text" name='google' class="social" placeholder="")
+                                            .contakt-form__block
+                                                input(type="submit" class='save' value="Сохранить")
+                                                input(type="submit" class='cancel' value="Отменить")
+                            li.user__icons-item
+                                svg(role="img" class="svg")
+                                    use( xlink:href="/assets/img/sprite.svg#soc_email")
+                                .contact__dropdown
+                                    .contact__dropdown-wrap.email
+                                        form(action="#" method="POST" class="contact__dropdown-form")
+                                            .contact-form__block
+                                                input(type="email" name='email' class="social" placeholder="")
+                                            .contakt-form__block
+                                                input(type="submit" class='save' value="Сохранить")
+                                                input(type="submit" class='cancel' value="Отменить")
+            .edit__header-block
+                a(href='#' class='edit-fon')
+                    .svg-wrap
+                        svg(role="img" class="svg")
+                            use( xlink:href="/assets/img/sprite.svg#cam")
+                    .edit-fon__text Изменить фон
+.edit__down
+    .cancel( id='exit') Отменить
+    form(action="#" method="POST" class="contact__dropdown-form")
+        .contakt-form__block
+            input(type="submit" class='save' value="Сохранить")

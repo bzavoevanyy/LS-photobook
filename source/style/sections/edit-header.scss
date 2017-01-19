@@ -1,0 +1,306 @@
+.edit__header{
+  @include tablet {
+    height: 340px;
+  }
+  @include phone {
+    height: 370px;
+  }
+  display:none;
+ position: absolute;
+  height: 300px;
+  width: 100%;
+  background: #000;
+  opacity: 0.7;
+  z-index:9995;
+}
+.edit__header-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex:1;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  .user__inf {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    .user__icons-list{
+      margin:30px 35px 55px;
+
+    }
+    .user__icons-item {
+      width: 20px;
+      height: 20px;
+
+    }
+    .svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.edit__header-block{
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  height: 100%;
+
+  .svg-wrap{
+    margin: 0 auto;
+    width: 40px;
+    height: 40px;
+  }
+  .svg{
+    width: 40px;
+    height: 40px;
+    fill:$white;
+  }
+  .user__avatar-img{
+    margin-bottom: 60px;
+  }
+  .user{
+    width: 700px;
+  }
+  .user-block{
+    width: 250px;
+  }
+}
+
+
+.user__avatar-text{
+  margin: 20px auto;
+  color: $white;
+  width: 70px;
+  text-align: center;
+}
+.edit-form{
+ margin-left: 30px;
+  height: 90px;
+}
+.name{
+  border: $white;
+  height: 35px;
+  width: 455px;
+  border-radius: 23px;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  outline: none;
+}
+.about{
+  padding: 5px 20px;
+  border: $white;
+  border-radius: 20px;
+  width: 435px;
+  height: 50px;
+  outline: none;
+  resize: none;
+  overflow: hidden;
+}
+.edit-fon{
+  margin: auto;
+}
+.edit-fon__text{
+  color: $white;
+  margin-top: 20px;
+}
+
+//выпадашка
+.user__icons-item:hover .contact__dropdown-wrap{
+  display: block;
+  cursor: pointer;
+}
+.contact__dropdown-wrap {
+  display:none;
+  position: absolute;
+  background: #fefefe;
+  border: 2px;
+  bottom: -15px;
+  z-index: 9999;
+  //top: 35px;
+  width: 275px;
+  z-index: 9999;
+  //right: -5%;
+  border-radius: 3px;
+  border: 2px solid $white;
+  transform: translateX(-10%, 0);
+  box-shadow:  3px 2px 3px rgba(0, 0, 0, 0.2);
+}
+.contact__dropdown-wrap.vk{
+  left:-95px;
+}
+.contact__dropdown-wrap.fb{
+  left:-65px;
+}
+.contact__dropdown-wrap.tw{
+  left:-32px;
+}
+.contact__dropdown-wrap.google{
+  left:0;
+}
+.contact__dropdown-wrap.email{
+  left:32px;
+}
+.contact__dropdown-wrap:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 275px;
+  height: 10px;
+  top: -10px;
+}
+
+.contact__dropdown-wrap:after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: $white;
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  transform: rotate(45deg) translate(-50%, 0);
+  z-index: -1;
+}
+
+.contact__dropdown-form {
+  text-align: left;
+  margin: 10px;
+}
+
+.contact__dropdown__link {
+  text-decoration: none;
+  color: #414141;
+}
+
+.contact__dropdown-text {
+  margin-left:15px;
+
+}
+
+.save{
+  background: $white;
+  color:$blue;
+  width: 130px;
+  height: 40px;
+  border-radius: 23px;
+  border:2px #28bbef solid;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+  &:hover{
+    background: $blue;
+    color: $white;
+  }
+}
+.social{
+  width: 235px;
+  margin: 0 auto;
+  height: 35px;
+  padding:0 10px;
+  border: 1px solid $dgrey;
+  border-radius: 23px;
+  outline: none;
+}
+.cancel{
+  border: none;
+  background: $white;
+  color: $blue;
+  margin: 10px 0 0 10px;
+  cursor: pointer;
+  outline: none;
+}
+ .contakt-form__block:nth-child(2){
+   display: flex;
+   flex-flow: row wrap;
+ }
+
+.edit__down{
+  position: absolute;
+  background: $white;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  top: 300px;
+  left: 0;
+  width: 100%;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .35s, visibility .35s, height .35s;
+  overflow: hidden;
+  z-index: 9900;
+  .cancel{
+    margin: 30px 10px;
+    height: 100px;
+  }
+  .contact__dropdown-form{
+    width: 200px;
+    height: 100px;
+  }
+  .contact-form__block{
+    display: flex;
+    flex-flow: row wrap;
+
+  }
+  &.open {
+    opacity: .9;
+    visibility: visible;
+    height: 100vh;}
+}
+//edit album
+.edit__header.album{
+  @include tablet {
+    height: 270px;
+  }
+  @include phone {
+    height: 295px;
+    display: flex;
+    flex-flow: column wrap;
+  }
+  height: 240px;
+  width: 100%;
+  .user{
+    width: 250px;
+  }
+}
+.edit__down.album{
+   top:240px;
+  .cancel{
+    position: absolute;
+    top: 5px;
+    right: 220px;
+  }
+  .save{
+    position: absolute;
+    top: 20px;
+  }
+
+}
+
+.edit-form__name{
+margin-top: 60px;
+  border: $white;
+  height: 40px;
+  width: 760px;
+  margin-left:-60px;
+  border-radius: 23px;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  outline: none;
+}
+.edit-form__discription{
+  border: $white;
+  margin-left:-60px;
+  height: 80px;
+  width: 760px;
+  border-radius: 20px;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  resize: none;
+  outline: none;
+}

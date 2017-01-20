@@ -1,0 +1,64 @@
+extends ../_template
+
+block variables
+    - var title = 'User'
+
+
+block content
+    include ../commons/index/index_content
+    .wrapper
+        .header
+            .header__top
+                .content
+                    .header-container
+                        .user
+                            .user__avatar
+                                .user__avatar-img(style="background-image:url('/assets/img/user.jpg');")
+                                    img.avatar-pic(src="/assets/img/user.jpg" alt="")
+                            .user__inf
+                                .user__name Фамилия Имя
+                                .user__text Я веб разработчик. Мне 24 года. Люблю путешествия, кодинг, фриланс и актвный отдых.
+                                ul.user__icons-list
+                                    li.user__icons-item
+                                        a(href='#').user__icons-link
+                                            svg(role="img" class="svg")
+                                                use( xlink:href="/assets/img/sprite.svg#soc_vk")
+                                    li.user__icons-item
+                                        a(href='#').user__icons-link
+                                            svg(role="img" class="svg" )
+                                                use( xlink:href="/assets/img/sprite.svg#soc_fb")
+                                    li.user__icons-item
+                                        a(href='#').user__icons-link
+                                            svg(role="img" class="svg" )
+                                                use( xlink:href="/assets/img/sprite.svg#soc_twitter")
+                                    li.user__icons-item
+                                        a(href='#').user__icons-link
+                                            svg(role="img" class="svg")
+                                                use( xlink:href="/assets/img/sprite.svg#social_google")
+                                    li.user__icons-item
+                                        a(href='#').user__icons-link
+                                            svg(role="img" class="svg")
+                                                use( xlink:href="/assets/img/sprite.svg#soc_email")
+                        .edit
+                            .edit-wrap.home
+                                .svg-wrap
+                                    svg(role="img" class="svg")
+                                        use( xlink:href="/assets/img/sprite.svg#home")
+                                a(href='album.html' class='hover-link')
+                                    .edit-hover__text На главную
+            .header__down
+                .content-down
+                    .search
+                        .svg-wrap
+                            svg(role="img" class="svg")
+                                use( xlink:href="/assets/img/sprite.svg#search")
+                        input(type="text" class="search-input" placeholder="Исследовать мир")
+        .main-content
+            section.myalbum
+                .content
+                    .noalbum
+                        .noalbum-text Альбомы еще не созданы.Создайте альбомы с помощью кнопки доабвить
+                    h2.myalbum__title Альбомы
+                    .myalbum__container
+                       include ../commons/album_list
+        include ../commons/footer

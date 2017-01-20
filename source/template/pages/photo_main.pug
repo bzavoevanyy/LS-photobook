@@ -1,0 +1,90 @@
+extends ../_template
+
+block variables
+    - var title = 'Photo_main'
+
+
+block content
+  include ../commons/index/index_content
+     .wrapper
+          include ../commons/edit_header
+          .header
+             .header__top
+                .content
+                   .header-container
+                       .header-error
+                           .header-error__text Вы не выбрали изображение
+                       .user
+                           .user__avatar
+                               .user__avatar-img(style="background-image:url('/assets/img/user.jpg');")
+                                   img.avatar-pic(src="/assets/img/user.jpg" alt="userfoto")
+                           .user__inf
+                               .user__name Фамилия Имя
+                               .user__text Я веб разработчик. Мне 24 года. Люблю путешествия, кодинг, фриланс и актвный отдых.
+                               ul.user__icons-list
+                                   li.user__icons-item
+                                          a(href='#').user__icons-link
+                                               svg(role="img" class="svg")
+                                                   use( xlink:href="/assets/img/sprite.svg#soc_vk")
+                                   li.user__icons-item
+                                           a(href='#').user__icons-link
+                                               svg(role="img" class="svg" )
+                                                   use( xlink:href="/assets/img/sprite.svg#soc_fb")
+                                   li.user__icons-item
+                                           a(href='#').user__icons-link
+                                               svg(role="img" class="svg" )
+                                                   use( xlink:href="/assets/img/sprite.svg#soc_twitter")
+                                   li.user__icons-item
+                                           a(href='#').user__icons-link
+                                               svg(role="img" class="svg")
+                                                   use( xlink:href="/assets/img/sprite.svg#social_google")
+                                   li.user__icons-item
+                                           a(href='#').user__icons-link
+                                               svg(role="img" class="svg")
+                                                   use( xlink:href="/assets/img/sprite.svg#soc_email")
+                       .edit
+                           .edit-wrap.edit
+                               .svg-wrap
+                                   svg(role="img" class="svg")
+                                       use( xlink:href="/assets/img/sprite.svg#edit")
+                               a(href='#' class='hover-link' id='toggle')
+                                           .edit-hover__text Редактировать
+                           .edit-wrap.out
+                               .svg-wrap
+                                   svg(role="img" class="svg")
+                                       use( xlink:href="/assets/img/sprite.svg#off")
+                               a(href='index.html' class='hover-link')
+                                           .edit-hover__text Выйти
+             .header__down
+                .content-down
+                   .search
+                       .svg-wrap
+                           svg(role="img" class="svg")
+                               use( xlink:href="/assets/img/sprite.svg#search")
+                       input(type="text" class="search-input" placeholder="Исследовать мир")
+          .main-content
+              section.world
+                 .content
+                   .noalbum
+                       .noalbum-text Увы , пока ничего не загружено!Загрузите что-нибудь и станьте первым
+                   h2.world__title Новое в мире
+                   .world__container
+                       include ../commons/album-list_main
+                   .show
+                      .show__button
+                          .show__button-text Показать еще
+              section.myalbum
+                 .content
+                     .noalbum
+                         .noalbum-text Альбомы еще не созданы.Создайте альбом с помощью кнопки добавить
+                     h2.myalbum__title Мои альбомы
+                     .add.main
+                         .add__btn
+                             .svg-wrap
+                                 svg(role="img" class="svg")
+                                     use( xlink:href="/assets/img/sprite.svg#add")
+                             a(href='#' class='hover-link')
+                                 .edit-hover__text Добавить
+                     .myalbum__container
+                         include ../commons/album_list
+          include ../commons/footer

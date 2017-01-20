@@ -1,0 +1,28 @@
+.edit__header.album
+    .content
+        .edit__header-container
+            .edit__header-block
+                .user
+                    .user-block
+                        div(class='user__avatar small')
+                            div(class='user__avatar-img small' style="background-image:url('/assets/img/user.jpg');")
+                                img.avatar-pic(src="/assets/img/user.jpg" alt="")
+                        .user__inf
+                            .user__name Фамилия Имя
+            .edit__header-block
+                form(action="#" method="POST" class="edit-form.album")
+                    .edit-form__block
+                        input(type="text" name='albname' class="edit-form__name" placeholder="")
+                    .edit-form__block
+                        textarea(class="edit-form__discription" placeholder="" name='albdicription')
+            .edit__header-block
+                a(href='#' class='edit-fon')
+                    .svg-wrap
+                        svg(role="img" class="svg")
+                            use( xlink:href="/assets/img/sprite.svg#cam")
+                    .edit-fon__text Изменить фон
+.edit__down.album
+    .cancel( id='exit') Отменить
+    form(action="#" method="POST" class="contact__dropdown-form")
+        .contakt-form__block
+            input(type="submit" class='save' value="Сохранить")

@@ -1,0 +1,93 @@
+extends ../_template
+
+block variables
+    - var title = 'Album'
+
+
+block content
+ include ../commons/index/index_content
+    .wrapper
+        include ../commons/edit_header_album
+        .header
+            .header__top
+                .content
+                    .header-container
+                        .user-block
+                            div(class='user__avatar small')
+                                div(class='user__avatar-img small' style="background-image:url('/assets/img/user.jpg');")
+                                    img.avatar-pic(src="/assets/img/user.jpg" alt="")
+                            .user__inf
+                              .user__name Фамилия Имя
+                        .album
+                            .album__name Лесные прогулки
+                            .album__discription Фотографии природы леса,енотов,оленей.Как приятно сойти на дальней станции и пройтись по полю босиком.И чтобы никто не беспокоил, бродить не спеша, влюбленным в эту тишину. Запах елей, сосен будоражит
+                        .edit.album
+                            .edit-wrap.home
+                                .svg-wrap
+                                    svg(role="img" class="svg")
+                                        use(xlink:href="/assets/img/sprite.svg#home")
+                                a(href='photo_main.html' class='hover-link')
+                                    .edit-hover__text На главную
+                            .edit-wrap.edit
+                                .svg-wrap
+                                    svg(role="img" class="svg")
+                                        use( xlink:href="/assets/img/sprite.svg#edit")
+                                a(href='#' class='hover-link' id='toggle')
+                                    .edit-hover__text Редактировать
+            .header__down
+                .content-down.all
+                        .all
+                            .all__icons
+                                .svg-wrap
+                                    svg(role="img" class="svg")
+                                        use( xlink:href="/assets/img/sprite.svg#cam")
+                            .all__photo
+                                .photo__quant 1
+                                .all__photo-text Фотографий
+                            .all__icons
+                                .svg-wrap
+                                    svg(role="img" class="svg")
+                                        use( xlink:href="/assets/img/sprite.svg#like")
+                            .all__likes
+                                .likes__quant 1
+                                .all__likes-text Лайков
+                            .all__icons
+                                .svg-wrap
+                                    svg(role="img" class="svg")
+                                        use( xlink:href="/assets/img/sprite.svg#comments")
+                            .all__comments
+                                .comments__quant 1
+                                .all__comments-text Комментариев
+            .header-fixed
+                .content
+                  .fixed-wrap
+                    .user-block
+                        div(class='user__avatar small')
+                            div(class='user__avatar-img small' style="background-image:url('/assets/img/user.jpg');")
+                                img.avatar-pic(src="/assets/img/user.jpg" alt="")
+                        .user__inf
+                           .user__name Фамилия Имя
+                    .album
+                        .album__name Лесные прогулки
+                    .edit.album
+                        .edit-wrap.home
+                            .svg-wrap
+                                svg(role="img" class="svg")
+                                    use(xlink:href="/assets/img/sprite.svg#home")
+                            a(href='photo_main.html' class='hover-link')
+                                    .edit-hover__text На главную
+        .main-content
+            section.album-photo
+                .content
+                    .noalbum
+                        .noalbum-text Здесь еще нет ни одно фотографии
+                    .add
+                        .add__btn
+                            .svg-wrap
+                                svg(role="img" class="svg")
+                                    use( xlink:href="/assets/img/sprite.svg#add")
+                            a(href='#' class='hover-link')
+                                .edit-hover__text Добавить
+                    .album-photo__container
+                        include ../commons/photo_list
+        include ../commons/footer

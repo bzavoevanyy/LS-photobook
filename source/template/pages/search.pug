@@ -1,0 +1,47 @@
+extends ../_template
+
+block variables
+    - var title = 'Search'
+
+
+block content
+    include ../commons/index/index_content
+    .wrapper
+        .search-header
+            .search-header__top
+                .content
+                    .search-container
+                        .search-header__title Исследуй мир
+                        .edit
+                            .edit-wrap.home
+                                .svg-wrap
+                                    svg(role="img" class="svg")
+                                        use( xlink:href="/assets/img/sprite.svg#home")
+                                a(href='photo_main.html' class='hover-link')
+                                    .edit-hover__text На главную
+            .search-header__down
+                .content
+                    .flex__down
+                        .user-block
+                            div(class='user__avatar small')
+                                div(class='user__avatar-img small' style="background-image:url('/assets/img/user.jpg');")
+                                    img.avatar-pic(src="/assets/img/user.jpg" alt="")
+                            .user__inf
+                                .user__name Фамилия Имя
+                        .search
+                                .svg-wrap
+                                    svg(role="img" class="svg")
+                                        use( xlink:href="/assets/img/sprite.svg#search")
+                                input(type="text" class="search-input" placeholder="Исследовать мир")
+                        .search-header__text
+                            a(href='#' class='search-header__link') Показать новые
+        .main-content
+            section.world
+                .content
+                    .noalbum
+                        .noalbum-text Увы , пока ничего не загружено!Загрузите что-нибудь и станьте первым
+                    .search-answer
+                        .search-answer__text По запросу "Природа" было найдено 9 результатов
+                    .world__container
+                        include ../commons/album-list_main
+        include ../commons/footer

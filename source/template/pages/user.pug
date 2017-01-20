@@ -53,12 +53,12 @@ block content
                             svg(role="img" class="svg")
                                 use( xlink:href="/assets/img/sprite.svg#search")
                         input(type="text" class="search-input" placeholder="Исследовать мир")
-
-        section.myalbum
-            .content
-                .noalbum
-                    .noalbum-text Альбомы еще не созданы.Создайте альбомы с помощью кнопки доабвить
-                h2.myalbum__title Альбомы
-                .myalbum__container
-                   include ../commons/album_list
+        .main-content
+            section.myalbum
+                .content
+                    .noalbum
+                        .noalbum-text Альбомы еще не созданы.Создайте альбомы с помощью кнопки доабвить
+                    h2.myalbum__title Альбомы
+                    .myalbum__container
+                       include ../commons/album_list
         include ../commons/footer

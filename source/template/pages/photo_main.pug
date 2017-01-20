@@ -62,28 +62,29 @@ block content
                            svg(role="img" class="svg")
                                use( xlink:href="/assets/img/sprite.svg#search")
                        input(type="text" class="search-input" placeholder="Исследовать мир")
-          section.world
-            .content
-               .noalbum
-                   .noalbum-text Увы , пока ничего не загружено!Загрузите что-нибудь и станьте первым
-               h2.world__title Новое в мире
-               .world__container
-                   include ../commons/album-list_main
-               .show
-                  .show__button
-                      .show__button-text Показать еще
-          section.myalbum
-             .content
-                 .noalbum
-                     .noalbum-text Альбомы еще не созданы.Создайте альбом с помощью кнопки добавить
-                 h2.myalbum__title Мои альбомы
-                 .add.main
-                     .add__btn
-                         .svg-wrap
-                             svg(role="img" class="svg")
-                                 use( xlink:href="/assets/img/sprite.svg#add")
-                         a(href='#' class='hover-link')
-                             .edit-hover__text Добавить
-                 .myalbum__container
-                     include ../commons/album_list
+          .main-content
+              section.world
+                 .content
+                   .noalbum
+                       .noalbum-text Увы , пока ничего не загружено!Загрузите что-нибудь и станьте первым
+                   h2.world__title Новое в мире
+                   .world__container
+                       include ../commons/album-list_main
+                   .show
+                      .show__button
+                          .show__button-text Показать еще
+              section.myalbum
+                 .content
+                     .noalbum
+                         .noalbum-text Альбомы еще не созданы.Создайте альбом с помощью кнопки добавить
+                     h2.myalbum__title Мои альбомы
+                     .add.main
+                         .add__btn
+                             .svg-wrap
+                                 svg(role="img" class="svg")
+                                     use( xlink:href="/assets/img/sprite.svg#add")
+                             a(href='#' class='hover-link')
+                                 .edit-hover__text Добавить
+                     .myalbum__container
+                         include ../commons/album_list
           include ../commons/footer

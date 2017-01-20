@@ -5,7 +5,7 @@ block variables
 
 
 block content
-    include ../commons/index/index_content
+ include ../commons/index/index_content
     .wrapper
         include ../commons/edit_header_album
         .header
@@ -76,17 +76,18 @@ block content
                                     use(xlink:href="/assets/img/sprite.svg#home")
                             a(href='photo_main.html' class='hover-link')
                                     .edit-hover__text На главную
-        section.album-photo
-            .content
-                .noalbum
-                    .noalbum-text Здесь еще нет ни одно фотографии
-                .add
-                    .add__btn
-                        .svg-wrap
-                            svg(role="img" class="svg")
-                                use( xlink:href="/assets/img/sprite.svg#add")
-                        a(href='#' class='hover-link')
-                            .edit-hover__text Добавить
-                .album-photo__container
-                    include ../commons/photo_list
+        .main-content
+            section.album-photo
+                .content
+                    .noalbum
+                        .noalbum-text Здесь еще нет ни одно фотографии
+                    .add
+                        .add__btn
+                            .svg-wrap
+                                svg(role="img" class="svg")
+                                    use( xlink:href="/assets/img/sprite.svg#add")
+                            a(href='#' class='hover-link')
+                                .edit-hover__text Добавить
+                    .album-photo__container
+                        include ../commons/photo_list
         include ../commons/footer

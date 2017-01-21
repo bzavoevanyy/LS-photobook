@@ -12,9 +12,10 @@ const passwordPattern = /^[a-z0-9_-]{6,18}$/;
 
 router
   .post('/', (req, res, next) => {
+    console.log(req.body);
     let message = [];
     if (req.body.hasOwnProperty('email') &&
-      req.body.name &&
+      req.body.email &&
       typeof req.body.email == 'string' &&
       emailPattern.test(req.body.email)) {
       User.findOne({email: req.body.email}).then((doc) => {

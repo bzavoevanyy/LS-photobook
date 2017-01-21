@@ -11,6 +11,7 @@ let session = require('express-session'); // Для работы сессий
 let MongoStore = require('connect-mongo')(session); // Хранение сессий в MongoDb
 let User = require('./models/User');
 let app = express();
+let index = require('./routers/index');
 let signup = require('./routers/signup');
 let signin = require('./routers/signin');
 let home = require('./routers/home');
@@ -49,7 +50,7 @@ passport.use('localUser', new LocalStrategy({
 }));
 
 
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'views/pages'));
 app.set('view engine', 'pug');
 
 
@@ -79,7 +80,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Routers
-
+app.use('/', index);
 app.use('/signup', signup);
 app.use('/signin', signin);
 app.use('/home', home);

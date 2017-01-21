@@ -6,7 +6,7 @@ block variables
 
 block content
   include ../commons/index/index_content
-     .wrapper
+     .wrapper.home
           include ../commons/edit_header
           .header
              .header__top
@@ -16,30 +16,30 @@ block content
                            .header-error__text Вы не выбрали изображение
                        .user
                            .user__avatar
-                               .user__avatar-img(style="background-image:url('/assets/img/user.jpg');")
-                                   img.avatar-pic(src="/assets/img/user.jpg" alt="userfoto")
+                               .user__avatar-img(style="background-image:url("+photo+");")
+                                   img.avatar-pic(src=photo alt="userfoto")
                            .user__inf
-                               .user__name Фамилия Имя
-                               .user__text Я веб разработчик. Мне 24 года. Люблю путешествия, кодинг, фриланс и актвный отдых.
+                               .user__name #{name}
+                               .user__text #{about}
                                ul.user__icons-list
                                    li.user__icons-item
-                                          a(href='#').user__icons-link
+                                          a(href=vk).user__icons-link
                                                svg(role="img" class="svg")
                                                    use( xlink:href="/assets/img/sprite.svg#soc_vk")
                                    li.user__icons-item
-                                           a(href='#').user__icons-link
+                                           a(href=facebook).user__icons-link
                                                svg(role="img" class="svg" )
                                                    use( xlink:href="/assets/img/sprite.svg#soc_fb")
                                    li.user__icons-item
-                                           a(href='#').user__icons-link
+                                           a(href=twitter).user__icons-link
                                                svg(role="img" class="svg" )
                                                    use( xlink:href="/assets/img/sprite.svg#soc_twitter")
                                    li.user__icons-item
-                                           a(href='#').user__icons-link
+                                           a(href=google).user__icons-link
                                                svg(role="img" class="svg")
                                                    use( xlink:href="/assets/img/sprite.svg#social_google")
                                    li.user__icons-item
-                                           a(href='#').user__icons-link
+                                           a(href=email).user__icons-link
                                                svg(role="img" class="svg")
                                                    use( xlink:href="/assets/img/sprite.svg#soc_email")
                        .edit

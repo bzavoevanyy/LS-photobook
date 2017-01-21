@@ -39,3 +39,7 @@ $.gulp.task('default', $.gulp.series(
     'serve'
   )
 ));
+$.gulp.task('deploy', $.gulp.parallel(
+  'copy:assets',
+  'copy:pug'
+));

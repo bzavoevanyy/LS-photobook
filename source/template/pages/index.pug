@@ -6,7 +6,7 @@ block variables
 
 block content
   include ../commons/index/index_content
-    .wrapper
+    .wrapper.index
       .login
         .content
           .login__top
@@ -20,12 +20,12 @@ block content
                       .svg-wrap
                          svg(role="img" class="svg")
                             use( xlink:href="/assets/img/sprite.svg#envelope")
-                      input(type="text" class="info" placeholder="Электронная почта")
+                      input(type="text" class="info" placeholder="Электронная почта" id='email')
                     .form-block
                       .svg-wrap
                          svg(role="img" class="svg")
                            use( xlink:href="/assets/img/sprite.svg#password")
-                      input(type="text" class="info" placeholder="Пароль")
+                      input(type="text" class="info" placeholder="Пароль" id='password')
                     div(class='form-block exept')
                       a(href='forget.html' class="form-link")
                          .form-link__text Забыли пароль?
@@ -33,7 +33,7 @@ block content
                         .error__wrap
                           .error__text Email или пароль неверен
                     .form-block
-                      input(type="submit" class='button' value="Войти")
+                      input(type="submit" class='button' value="Войти" id='signin')
                     .form-block
                        .form-block__text Нет аккаунта?
                        a(href='registration.html' class='form-link' id='front') Зарегистрирваться
@@ -44,21 +44,24 @@ block content
                       .svg-wrap
                         svg(role="img" class="svg")
                           use( xlink:href="/assets/img/sprite.svg#name")
-                      input(type="text" class="info" placeholder="Имя")
+                      input(type="text" class="info" placeholder="Имя" id='newname')
                     .form-block
                       .svg-wrap
                         svg(role="img" class="svg")
                           use( xlink:href="/assets/img/sprite.svg#envelope")
-                      input(type="text" class="info" placeholder="Электронная почта")
+                      input(type="text" class="info" placeholder="Электронная почта" id='newemail')
                     .form-block
                       .svg-wrap
                         svg(role="img" class="svg")
                           use( xlink:href="/assets/img/sprite.svg#password")
-                      input(type="text" class="info" placeholder="Пароль")
+                      input(type="text" class="info" placeholder="Пароль" id='newpassword')
+                    div(class='form-block error' )
+                      .error__wrap
+                        .error__text Имя, Email или пароль неверен
                     div(class='form-block height')
                        .form-block__text Ваши данные остаются строго конфеденциальны
                     .form-block
-                      input(type="submit" class='button' value="Создать аккаунт")
+                      input(type="submit" class='button' value="Создать аккаунт" id='signup')
                     .form-block
                       .form-block__text Уже зарегистрированы?
                       a(href='search.html' class='form-link' id='back') Войти

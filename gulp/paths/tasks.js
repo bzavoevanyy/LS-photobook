@@ -16,6 +16,7 @@ module.exports = [
   './gulp/tasks/copy.fonts.js',
   './gulp/tasks/js.lint.js',
   './gulp/tasks/webpack.js',
-  './gulp/tasks/copy.admin.js'
+  './gulp/tasks/copy.assets.js',
+  './gulp/tasks/copy.pug.js'
 ];
 

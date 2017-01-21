@@ -15,10 +15,11 @@ let cpUpload = upload.fields([{name: 'photo', maxCount: 1}, {name: 'backimg', ma
 router
   .get('/', isLoggedIn, (req, res, next) => {
     let userId = req.session.passport.user;
-    User.findById(userId, (err, doc) => {
+    User.findById(userId, 'userId name email facebook twitter google vk photo backimg',(err, doc) => {
       if (err) return next(err);
       // TODO make object for render template
-      res.end('ok');
+      console.log(doc);
+      res.render('photo_main', doc);
     });
 
   })

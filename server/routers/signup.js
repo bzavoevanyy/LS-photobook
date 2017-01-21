@@ -24,9 +24,9 @@ router
       twitter: '',
       google: '',
       vk: '',
-      about: '',
-      photo: '/img/photo.jpg',
-      backimg: '/img/backimg.jpg'
+      about: 'Заполните описание и социальные сети нажав на кнопку "Редактировать"',
+      photo: '/assets/img/photo.jpg',
+      backimg: '/assets/img/backimg.jpg'
     };
     let message = [];
     if (req.body.hasOwnProperty('email') &&
@@ -72,7 +72,7 @@ router
                 if (err) {
                   return next(err);
                 }
-                return res.json([{status : 200, rediect : '/home'}]);
+                return res.json([{status : 200, redirect : '/home'}]);
               });
             })(req, res, next);
 

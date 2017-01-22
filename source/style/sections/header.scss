@@ -11,10 +11,9 @@
   width: 100%;
   display: flex;
   flex-flow: column;
-  background:url("/assets/img/bg.jpg") center  no-repeat;
-  background-color: $dgrey;
+  background:url("/assets/img/no_album_cover.jpg") center  no-repeat;
+  background-color: red;
   background-size: cover;
-  //z-index: 1;
 }
 .header__top{
   @include tablet {
@@ -29,9 +28,6 @@
   width: 100%;
 }
 .header-container{
-  @include tablet {
-
-  }
   @include phone {
     flex-flow: column-reverse wrap;
   }
@@ -55,9 +51,6 @@
   background: #c4cbcd;
 }
 .user{
-  @include tablet {
-
-  }
   @include phone {
     width: 80%;
     height: 85%;
@@ -70,9 +63,6 @@
   flex-flow: row wrap;
 }
 .user__avatar{
-  @include tablet {
-
-  }
   @include phone {
     width: 100%;
     height: 40%;
@@ -114,9 +104,6 @@
   display: none;
 }
 .user__inf{
-  @include tablet {
-
-  }
   @include phone {
     width: 100%;
     height: 60%;
@@ -130,9 +117,7 @@
   margin: 0;
 }
 .user__name{
-  @include tablet {
 
-  }
   @include phone {
    margin: 0 0 5px;
    text-align: center;
@@ -145,9 +130,7 @@
   margin: 55px 35px 10px;
 }
 .user__text{
-  @include tablet {
 
-  }
   @include phone {
     margin:  0 auto;
     text-align: center;
@@ -156,12 +139,14 @@
   }
   color: $white;
   margin: 0 35px 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
   word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .user__icons-list{
-  @include tablet {
 
-  }
   @include phone {
     margin:  0 auto;
 
@@ -171,12 +156,9 @@
   margin: 20px 35px 10px;
 }
 .user__icons-item{
-  @include tablet {
 
-  }
   @include phone {
     margin-top: 10px;
-
   }
   display: flex;
   flex: 1;
@@ -195,6 +177,9 @@
 
 .content-down{
   @include desktop {
+    width: 1800px;
+  }
+  @include laptop{
     width: 1200px;
   }
   @include tablet {
@@ -204,7 +189,7 @@
     width: 95%;
     justify-content: center;
   }
-  //max-width: 1200px;
+
   margin: 0 auto;
   height: 100%;
   display: flex;
@@ -212,9 +197,7 @@
   align-items: center;
 }
 .search{
-  @include tablet {
 
-  }
   @include phone {
     width: 380px;
     height: 50px;
@@ -225,6 +208,8 @@
   height: 40px;
   border-radius: 23px;
   background: $white;
+
+
   &:hover{
     border: 1px $blue solid;
   }
@@ -234,6 +219,7 @@
   border: none;
   outline:none;
   width: 50%;
+
 }
 //header-fixed
 .header-fixed{
@@ -242,6 +228,10 @@
   height: 60px;
   background: $lgrey;
   z-index: 9999;
+  .edit-wrap.home{
+    top: -15px;
+
+  }
 
 }
 .top{
@@ -249,6 +239,12 @@
   display: block;
 }
 .fixed-wrap{
+  @include tablet {
+  justify-content: flex-start;
+  }
+  @include phone {
+    justify-content: center;
+  }
   width: 100%;
   height: 100%;
   display: flex;
@@ -256,6 +252,13 @@
   flex:1;
   justify-content: space-between;
   .album{
+    @include tablet {
+      width: 70%;
+      margin: 0 auto;
+    }
+    @include phone {
+      margin-top: 10px auto;
+    }
     margin: 0 auto;
   }
   .album__name{
@@ -263,6 +266,14 @@
     color: $black;
   }
   .user-block{
+    @include tablet {
+      width: 30%;
+    }
+    @include phone {
+      width: 20%;
+      height: 100%;
+      order:-1;
+    }
     margin: 0;
     .user__avatar-img.small{
       width: 50px;
@@ -270,10 +281,36 @@
       margin-bottom: 5px;
     }
   }
+  .edit.album{
+
+    @include tablet {
+      margin: 10px 20px 0;
+      width: 40px;
+      height: 40px;
+    }
+    .edit-wrap.edit:hover{
+      width: 120px !important;
+    }
+
+  }
   .edit-wrap.home{
+    @include tablet {
+      width: 40px;
+      height: 40px;
+    }
     margin: 0;
+
+  }
+  .user__inf{
+    @include phone {
+      display: none;
+    }
+
   }
   .user__name{
+    @include phone {
+    display: none;
+    }
     margin: 0;
     color:$black;
   }

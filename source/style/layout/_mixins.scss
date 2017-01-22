@@ -10,7 +10,7 @@ $black: #050a0d;
   }
 }
 @mixin laptop {
-  @media (max-width: 1400px) {
+  @media (max-width: 1360px) {
     @content
   }
 }

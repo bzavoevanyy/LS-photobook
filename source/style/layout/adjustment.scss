@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html, body {
   @include desktop {
     font-size: 16px;
@@ -37,9 +41,15 @@ a{
   cursor: pointer;
 }
 .wrapper{
+  @include desktop {
+    width: 1920px;
+  }
+  @include laptop {
+    width: 100%;
+  }
+  min-height: 100%;
   width: 100%;
-  //height: 100%;
-  min-height: 100vh;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
@@ -51,7 +61,7 @@ a{
   margin: 0 auto;
 
   @include desktop {
-    width: 1800px;
+    width: 1700px;
   }
   @include laptop{
     width: 1200px;

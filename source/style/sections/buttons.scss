@@ -1,14 +1,17 @@
 .edit{
-  @include tablet {
 
-  }
   @include phone {
     width: 100%;
     height: 10%;
     margin-top: 10px;
     justify-content: space-between;
     flex-flow: row wrap;
-
+    .edit-wrap.edit{
+      @include phone {
+        position: absolute;
+        left: 0;
+      }
+    }
   }
   width: 20%;
   height: 100%;
@@ -19,12 +22,8 @@
 
 }
 .edit-wrap{
-  @include tablet {
 
-  }
-  @include phone {
 
-  }
   width: 40px;
   height: 40px;
   position: relative;
@@ -60,6 +59,8 @@
   color: #fff;
   font-size: 10px;
   margin-right: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .edit-wrap:hover{
@@ -70,32 +71,18 @@
   }
   .edit-hover__text{
     display: block;
-
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
-.edit-wrap.edit{
-  @include tablet {
 
-  }
-  @include phone {
-   position: absolute;
-    left: 0;
-
-  }
-}
 .edit-wrap.out{
-  @include tablet {
-
-  }
   @include phone {
     position: absolute;
     right: 0;
   }
 }
 .edit-wrap.home{
-  @include tablet {
-
-  }
   @include phone {
     position: absolute;
     right: 0;
@@ -118,9 +105,6 @@
 
 }
 .add__btn{
-  @include tablet {
-
-  }
   @include phone {
    right: 5px;
   }

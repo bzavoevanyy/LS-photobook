@@ -1,19 +1,30 @@
-.edit__header{
+.edit__header {
   @include tablet {
-    height: 340px;
+    height: 280px;
   }
   @include phone {
-    height: 370px;
+    height: 435px;
   }
-  display:none;
- position: absolute;
+  display: none;
+  position: absolute;
   height: 300px;
   width: 100%;
   background: #000;
-  opacity: 0.7;
-  z-index:9995;
+  opacity: 0.8;
+  z-index: 9990;
+  animation-name: slideDown;
+  animation-duration: 0.35s;
+  animation-timing-function: ease-in;
+  visibility: visible !important;
 }
 .edit__header-container{
+  @include tablet {
+    align-items: flex-start;
+  }
+  @include phone {
+     flex-flow: column nowrap;
+    align-items: center;
+  }
   width: 100%;
   height: 100%;
   display: flex;
@@ -21,26 +32,62 @@
   flex-flow: row wrap;
   justify-content: space-between;
   .user__inf {
+    @include tablet {
+    align-items: flex-start;
+    }
+    @include phone {
+      height: 100px;
+      justify-content: flex-start;
+      align-items: center;
+    }
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     .user__icons-list{
-      margin:30px 35px 55px;
+      @include tablet {
+        margin:55px 4px 0 ;
+      }
+      @include phone {
+        margin: 40px auto 0;
+        width: 50%;
+      }
+      margin:50px 35px 55px;
 
     }
     .user__icons-item {
+      @include tablet {
+      margin-right: 12px;
+        width: 30px;
+        height: 30px;
+      }
+
       width: 20px;
       height: 20px;
 
     }
     .svg {
+      @include tablet {
+        width: 23px;
+        height: 23px;
+      }
+      @include phone {
+
+      }
       width: 20px;
       height: 20px;
     }
   }
 }
-
+.edit__header-block:nth-child(2){
+  @include phone {
+    align-items: flex-end;
+    height: 100px;
+  }
+}
 .edit__header-block{
+  @include phone {
+   align-items: flex-start;
+  }
   position: relative;
   display: flex;
   flex-flow: row wrap;
@@ -48,38 +95,97 @@
   height: 100%;
 
   .svg-wrap{
+    @include tablet {
+      width: 60px;
+    }
+
     margin: 0 auto;
     width: 40px;
     height: 40px;
   }
   .svg{
+    @include tablet {
+      width: 45px;
+
+    }
+    @include phone {
+      width: 25px;
+      height: 25px;
+      margin-top:5px;
+    }
     width: 40px;
     height: 40px;
     fill:$white;
   }
   .user__avatar-img{
+    @include tablet {
+      margin: 0 5px 20px;
+      border: 4px solid $white;
+      width: 110px;
+      height: 110px;
+    }
+    @include phone {
+      width: 70px;
+      height: 70px;
+
+    }
     margin-bottom: 60px;
   }
   .user{
+    @include tablet {
+      width: 680px;
+    }
+    @include phone {
+      width: 85%;
+      height: 270px;
+      margin:20px auto;
+      align-items: center;
+    }
     width: 700px;
   }
   .user-block{
     width: 250px;
   }
+  .user__avatar{
+    @include phone {
+      height: 50px;
+      margin-top:20px;
+      margin-bottom:15px;
+    }
+  }
 }
 
 
 .user__avatar-text{
+  @include tablet {
+    margin: 12px auto ;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  @include phone {
+  display: none;
+  }
   margin: 20px auto;
   color: $white;
   width: 70px;
   text-align: center;
 }
 .edit-form{
+  @include tablet {
+    margin: 0;
+  }
+
  margin-left: 30px;
   height: 90px;
 }
 .name{
+  @include tablet {
+    height: 45px;
+    width: 520px;
+  }
+  @include phone {
+    width: 360px;
+  }
   border: $white;
   height: 35px;
   width: 455px;
@@ -89,59 +195,69 @@
   outline: none;
 }
 .about{
+  @include tablet {
+    height: 65px;
+    width: 520px;
+  }
+  @include phone {
+    width: 360px;
+  }
   padding: 5px 20px;
   border: $white;
   border-radius: 20px;
-  width: 435px;
+  width: 455px;
   height: 50px;
   outline: none;
   resize: none;
   overflow: hidden;
 }
 .edit-fon{
-  margin: auto;
+  margin: 0 auto ;
+      .svg{
+        width: 40px;
+        height: 40px;
+      }
 }
 .edit-fon__text{
+  @include tablet {
+    margin:20px auto;
+    font-size: 18px;
+
+  }
+
   color: $white;
   margin-top: 20px;
 }
 
 //выпадашка
+.contact__dropdown{
+  @include tablet {
+    width: 4px;
+  }
+
+}
 .user__icons-item:hover .contact__dropdown-wrap{
   display: block;
   cursor: pointer;
 }
 .contact__dropdown-wrap {
-  display:none;
-  position: absolute;
-  background: #fefefe;
+  @include phone {
+    width: 270px;
+  }
+ display: none;
+  position: relative;
+  background: $white;
   border: 2px;
   bottom: -15px;
   z-index: 9999;
-  //top: 35px;
+  left:-130px;
   width: 275px;
-  z-index: 9999;
-  //right: -5%;
   border-radius: 3px;
   border: 2px solid $white;
   transform: translateX(-10%, 0);
   box-shadow:  3px 2px 3px rgba(0, 0, 0, 0.2);
 }
-.contact__dropdown-wrap.vk{
-  left:-95px;
-}
-.contact__dropdown-wrap.fb{
-  left:-65px;
-}
-.contact__dropdown-wrap.tw{
-  left:-32px;
-}
-.contact__dropdown-wrap.google{
-  left:0;
-}
-.contact__dropdown-wrap.email{
-  left:32px;
-}
+
 .contact__dropdown-wrap:before {
   content: "";
   display: block;
@@ -176,12 +292,16 @@
 
 .contact__dropdown-text {
   margin-left:15px;
-
 }
 
 .save{
-  background: $white;
-  color:$blue;
+  @include phone {
+    height: 50px;
+    margin-top:5px;
+    margin-left:10px;
+  }
+  background: $blue;
+  color:$white;
   width: 130px;
   height: 40px;
   border-radius: 23px;
@@ -193,11 +313,14 @@
   cursor: pointer;
   outline: none;
   &:hover{
-    background: $blue;
-    color: $white;
+    background: $white;
+    color: $blue;
   }
 }
 .social{
+  @include phone {
+    margin-left:5px;
+  }
   width: 235px;
   margin: 0 auto;
   height: 35px;
@@ -220,7 +343,13 @@
  }
 
 .edit__down{
- position: absolute;
+  @include tablet {
+    top:275px;
+  }
+  @include phone {
+    top:435px;
+  }
+  position: absolute;
   //position: fixed;
   background: $white;
   display: flex;
@@ -228,13 +357,12 @@
   justify-content: flex-end;
   top: 300px;
   left: 0;
+  height: 0;
   width: 100%;
-  height:500px;
   opacity: 0;
-  visibility: hidden;
-  transition: opacity .35s, visibility .35s, height .35s;
   overflow: hidden;
   z-index: 9900;
+  visibility: visible !important;
   .cancel{
     margin: 30px 10px;
     height: 100px;
@@ -249,29 +377,49 @@
 
   }
   &.open {
-    opacity: .9;
+    opacity: .8;
     visibility: visible;
-    height: 100vh;}
+    animation-name: slideUp;
+    animation-duration: 0.35s;
+    animation-timing-function:ease-in;
+    }
 }
 //edit album
 .edit__header.album{
+  .edit__header-block:nth-child(2){
+    align-items: center;
+    justify-content: center;
+  }
+ .edit-fon{
+   margin-top: 30px;
+   @include phone{
+     margin-top: 80px;
+   }
+ }
   @include tablet {
-    height: 270px;
+    height: 280px;
   }
   @include phone {
-    height: 295px;
-    display: flex;
+    height: 435px;
+
     flex-flow: column wrap;
   }
   height: 240px;
   width: 100%;
+  display: none;
   .user{
     width: 250px;
   }
+
 }
 .edit__down.album{
+  @include tablet {
+    top: 265px;
+  }
+  @include phone {
+    top: 430px;
+  }
    top:240px;
-  height: 500px;
   .cancel{
     position: absolute;
     top: 5px;
@@ -285,25 +433,86 @@
 }
 
 .edit-form__name{
+  @include tablet {
+    width: 530px;
+  }
+  @include phone {
+    width: 320px;
+    margin: 30px auto 0;
+  }
 margin-top: 60px;
   border: $white;
   height: 40px;
   width: 760px;
   margin-left:-60px;
   border-radius: 23px;
-  padding-left: 20px;
+  padding: 5px 20px;
   margin-bottom: 10px;
   outline: none;
 }
 .edit-form__discription{
+  @include tablet {
+    width: 530px;
+  }
+  @include phone {
+    width: 320px;
+    margin:5px auto;
+    height: 130px;
+  }
   border: $white;
   margin-left:-60px;
   height: 80px;
   width: 760px;
   border-radius: 20px;
-  padding-left: 20px;
+  padding: 10px 20px;
   margin-bottom: 10px;
   resize: none;
   outline: none;
 }
 
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  20%{
+    transform: translateY(-60%);
+  }
+  40%{
+    transform: translateY(-60%);
+  }
+  60%{
+    transform: translateY(-40%);
+  }
+  80%{
+    transform: translateY(-20%);
+  }
+  95%{
+  transform: translateY(-4%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+  }
+  20%{
+    transform: translateY(80%);
+  }
+  40%{
+    transform: translateY(60%);
+  }
+  60%{
+    transform: translateY(40%);
+  }
+  80%{
+    transform: translateY(20%);
+  }
+  95%{
+    transform: translateY(-4%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}

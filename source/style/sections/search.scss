@@ -1,7 +1,5 @@
 .search-header{
-  @include tablet {
 
-  }
   @include phone {
     height: 200px;
 
@@ -20,6 +18,7 @@
       display: none;
     }
   }
+
 
 }
 
@@ -51,14 +50,10 @@
   background: #f6f6f6;
   display: flex;
   .search{
-    @include tablet {
-
-    }
     @include phone {
       width: 350px;
       margin: 10px auto;
     }
-    margin-top:10px;
     margin-right: -30px;
   }
   .user__name{

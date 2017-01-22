@@ -45,6 +45,7 @@
   .user__name{
 
     @include phone {
+      width: 200px;
     text-align: left;
     }
     margin:  20px 0 0 10px;
@@ -236,7 +237,7 @@ font-family: "Panton-Bold";
   }
   @include phone {
   justify-content: center;
-    margin-left: -5px;
+    margin-left: -6px;
   }
 
   display: flex;

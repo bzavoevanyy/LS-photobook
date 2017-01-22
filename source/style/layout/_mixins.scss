@@ -10,10 +10,11 @@ $black: #050a0d;
   }
 }
 @mixin laptop {
-  @media (max-width: 1360px) {
+  @media (max-width: 1390px) {
     @content
   }
 }
+
 @mixin tablet {
   @media (max-width: 900px) {
   @content

@@ -389,7 +389,15 @@
   .edit__header-block:nth-child(2){
     align-items: center;
     justify-content: center;
-  }
+
+  }.edit__header-block{
+       .user__avatar.small{
+         @include phone{
+           margin:0 40px 0 0;
+
+         }
+       }
+     }
  .edit-fon{
    margin-top: 30px;
    @include phone{

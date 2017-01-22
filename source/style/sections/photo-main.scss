@@ -140,6 +140,7 @@ text-align: left;
 .photo__discription{
 font-size: 18px;
   margin-left: 2px;
+  text-overflow: ellipsis;
 }
 .comments{
   display: flex;

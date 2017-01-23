@@ -12,7 +12,7 @@ const passwordPattern = /^[a-z0-9_-]{6,18}$/;
 
 router
   .post('/', (req, res, next) => {
-    console.log(req.body);
+    console.log(req.body.email);
     let message = [];
     if (req.body.hasOwnProperty('email') &&
       req.body.email &&

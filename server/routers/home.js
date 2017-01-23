@@ -4,6 +4,7 @@ let router = express.Router();
 let passport = require('passport');
 let isLoggedIn = require('../utils/isLoggedIn');
 let User = require('../models/User');
+let mkdirp = require('mkdirp');
 let multer = require('multer');
 let upload = multer({dest: '../uploads/'});
 let fs = require('fs');
@@ -24,8 +25,11 @@ router
 
   })
   .post('/preloadimg', isLoggedIn, cpUpload, (req, res, next) => {
+
     let imgSrc = {};
+
     if (req.files) {
+
       // TODO !!! need files validation
       if (req.files.photo) {
         fs.renameSync(req.files.photo[0].path, '../public/temp/' + req.files.photo[0].filename);
@@ -40,6 +44,8 @@ router
   })
   .post('/edit', isLoggedIn, (req, res, next) => {
     let query = User.findById(req.session.passport.user);
+    let socialLink = new RegExp(/^((https|http):\/\/)?(?:www\.)?(facebook|twitter|vk)\.com\/(?:(?:\w)*#!\/)?(?:pages\/)?(?:[\w\-]*\/)*([\w\-]*)$/);
+    let googleLink = new RegExp(/^((https|http):\/\/)?(?:www\.)?plus\.google\.com\/.*$/);
     query.select('userId');
     User.findById(req.session.passport.user, 'name facebook twitter google vk about photo backimg', (err, updateUser) => {
       for (let key in updateUser) {
@@ -51,9 +57,40 @@ router
           if (key === 'name') {
             if (namePatttern.test(req.body[key])) updateUser.name = req.body.name;
           }
-          if (key === 'facebook' || key === 'twitter' || key === 'google' || key === 'vk') {
-            updateUser[key] = req.body[key]; //TODO validate social links
+
+          //Done__TODO validate social links
+
+          if (key === 'facebook') {
+            if (socialLink.test(req.body[key])) {
+                updateUser.facebook = req.body.facebook;
+            } else {
+              console.log('Error bad lick facebook');
+            }
           }
+          if (key === 'twitter') {
+            if (socialLink.test(req.body[key])) {
+              updateUser.twitter = req.body.twitter;
+            } else {
+                console.log('Error bad lick twitter');
+            }
+          }
+
+          if (key === 'google') {
+            if (googleLink.test(req.body[key])) {
+              updateUser.google = req.body.google;
+            } else {
+              console.log('Error bad lick google');
+            }
+          }
+
+          if (key === 'vk') {
+            if (socialLink.test(req.body[key])) {
+              updateUser.vk = req.body.vk;
+            } else {
+              console.log('Error bad lick vk');
+            }
+          }
+
           if (key === 'about') updateUser.about = req.body.about; // TODO validate text 'about'
 
           let query = User.findById(req.session.passport.user);

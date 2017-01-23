@@ -1,3 +1,4 @@
+'use strict';
 let path = require('path');
 module.exports = {
   devtool: "source-map",

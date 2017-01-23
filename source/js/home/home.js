@@ -1,3 +1,4 @@
+'use strict';
 let home = () => {
   let sendCover = () => {
     // TODO need file validation

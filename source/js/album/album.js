@@ -1,3 +1,4 @@
+'use strict';
 let album = () => {
   let getPhotos = () => {
     let albumId = $('.main-content').data('albumid');

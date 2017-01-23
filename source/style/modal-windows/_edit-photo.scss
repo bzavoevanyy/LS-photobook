@@ -1,0 +1,90 @@
+.edit {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  min-height: 260px;
+  padding: 38px 16px 38px 55px;
+
+  @include tablet {
+    padding-left: 28px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 15px 10px 20px 7px;
+  }
+
+  &__name, &__desc {
+    display: flex;
+    width: 100%;
+
+    @media (max-width: 480px) {
+      flex-direction: column;
+    }
+  }
+
+  &__name {
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 19px;
+
+    @media (max-width: 480px) {
+      align-items: flex-start;
+      margin-bottom: 5px;
+    }
+
+    &-textarea {
+      width: 512px;
+      resize: none;
+      border: 1px solid #d6d6d6;
+      border-radius: 18px;
+      padding: 9px 20px 0;
+      overflow: hidden;
+      font-family: ProximaNova;
+      font-weight: 500;
+      line-height: 21px;
+
+      @include tablet {
+        width: 452px;
+      }
+
+      @media (max-width: 600px) {
+        width: 100%;
+      }
+
+      @include phone {
+        font-size: 14px;
+      }
+
+      &:focus {
+        border-color: #2abceb;
+      }
+
+      &_name {
+       min-height: 40px;
+      }
+
+      &_desc {
+        min-height: 120px;
+
+        @media (max-width: 600px) {
+          width: 95%;
+        }
+
+        @include phone {
+          width: 280px;
+          padding-top: 14px;
+        }
+      }
+    }
+  }
+
+  .modal__desc_edit-desc {
+    margin-top: 10px;
+  }
+
+  &-desc {
+    min-height: 120px;
+  }
+}
+

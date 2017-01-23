@@ -75,12 +75,15 @@
   height: 278px;
   display: flex;
   width: 100%;
-  background: url("/assets/img/bg.jpg")  50% no-repeat;
-  background-size: cover;
+  //background: url("/assets/img/bg.jpg")  50% no-repeat;
+  //background-size: cover;
   position: relative;
 
 }
-
+.myalbum__top-img {
+  max-height: 278px;
+  margin: 0 auto;
+}
 .myalbum__down{
   @include tablet {
   }
@@ -207,7 +210,7 @@
   height: 100%;
 }
 .svg-wrap.user{
-  display: none;
+  //display: none;
   @include tablet {
 
   }
@@ -216,4 +219,8 @@
     margin-top: 5px;
     margin-left: 20px;
   }
+}
+.edit-link__album {
+  width: 50px;
+  height: 50px;
 }

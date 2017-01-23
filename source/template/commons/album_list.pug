@@ -1,17 +1,19 @@
 ul.myalbum__list
-    li.myalbum__item
-        .myalbum__top
-            .myalbum-hover
-                a(href='#' class="hover-link")
-                    .myalbum-hover__block
-                        .album__discription Фотографии природы леса,енотов,оленей
-                        .all
-                            .photo__quant 7
-                            .all__photo-text Фотографий
-        .myalbum__down
-            a(href='#' class='edit-link')
-                .svg-wrap.user
-                    svg(role="img" class="svg")
-                        use( xlink:href="/assets/img/sprite.svg#edit")
-            .user-album
-                .album__name Горы
+    each val in albums
+        li.myalbum__item
+            .myalbum__top
+                img.myalbum__top-img(src='/photo/' + val.cover)
+                .myalbum-hover
+                    a(href='/album/' + val.albumId class="hover-link")
+                        .myalbum-hover__block
+                            .album__discription #{val.desc}
+                            .all
+                                .photo__quant #{val.counter}
+                                .all__photo-text Фотографий
+            .myalbum__down
+                a(href='#' class='edit-link__album' data-album=val.albumId)
+                    .svg-wrap.user
+                        svg(role="img" class="svg")
+                            use( xlink:href="/assets/img/sprite.svg#edit")
+                .user-album
+                    .album__name #{val.name}

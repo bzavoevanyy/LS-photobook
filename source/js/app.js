@@ -1,10 +1,13 @@
 'use strict';
+require("script-loader!./bpopup/bpopup.min");
 import index from './index/index';
 import home from './home/home';
+import album from './album/album';
 
 $(document).ready(() => {
   index.init();
   home.init();
+  album.init();
   $('#toggle').click(function() {
 
     $(this).toggleClass('active');

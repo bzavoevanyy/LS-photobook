@@ -1,30 +1,31 @@
 ul.album-photo__list
-    li(class='album-photo__item')
-        .album-photo__top
-            .album-photo__img
-                .img-hover
-                    a(href='#' class='hover-link')
-                        .img-hover__block
-                            svg(role="img" class="svg")
-                                use( xlink:href="/assets/img/sprite.svg#loupe")
-            .comments.album
-                a(href='#' class='comments-link')
-                    .comments__note
-                        .svg-wrap
-                            svg(role="img" class="svg")
-                                use( xlink:href="/assets/img/sprite.svg#comments")
-                .comments__quant 1
-                a(href="#" class="likes-link")
-                    .likes
-                        .svg-wrap
-                            svg(role="img" class="svg")
-                                use( xlink:href="/assets/img/sprite.svg#like")
-                .likes__quant 1
-        .album-photo__down
-            a(href="#" class="edit-link")
-                .svg-wrap
-                    svg(role="img" class="svg")
-                        use( xlink:href="/assets/img/sprite.svg#edit")
-            .photo__name
-                a(href="#")
-                    .photo__name-text Горы
+    each val in obj
+        li(class='album-photo__item')
+            .album-photo__top
+                .album-photo__img(style="background:url(/photo/"+val.photoId+") no-repeat")
+                    .img-hover
+                        a(href='#' class='hover-link')
+                            .img-hover__block
+                                svg(role="img" class="svg")
+                                    use( xlink:href="/assets/img/sprite.svg#loupe")
+                .comments.album
+                    a(href='#' class='comments-link')
+                        .comments__note
+                            .svg-wrap
+                                svg(role="img" class="svg")
+                                    use( xlink:href="/assets/img/sprite.svg#comments")
+                    .comments__quant #{val.comments.length}
+                    a(href="#" class="likes-link")
+                        .likes
+                            .svg-wrap
+                                svg(role="img" class="svg")
+                                    use( xlink:href="/assets/img/sprite.svg#like")
+                    .likes__quant #{val.likes}
+            .album-photo__down
+                a(href="#" class="edit-link")
+                    .svg-wrap
+                        svg(role="img" class="svg")
+                            use( xlink:href="/assets/img/sprite.svg#edit")
+                .photo__name
+                    a(href="#")
+                        .photo__name-text #{val.name}

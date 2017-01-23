@@ -10,7 +10,8 @@ let photoSchema = new Schema({
   albumId : Number,
   comments : Array,
   tags : Array,
-  likes : Number
+  likes : Number,
+  filename : String
 });
 photoSchema.plugin(autoIncrement.plugin, {model : 'Photo', field: 'photoId'});
 

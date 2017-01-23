@@ -15,6 +15,8 @@ let index = require('./routers/index');
 let signup = require('./routers/signup');
 let signin = require('./routers/signin');
 let home = require('./routers/home');
+let album = require('./routers/album');
+let photo = require('./routers/photo');
 let crypto;
 try {
   crypto = require('crypto');
@@ -84,6 +86,8 @@ app.use('/', index);
 app.use('/signup', signup);
 app.use('/signin', signin);
 app.use('/home', home);
+app.use('/album', album);
+app.use('/photo', photo);
 
 // следующий маршрут удаляет сессию
 app.get('/del', (req, res) => {

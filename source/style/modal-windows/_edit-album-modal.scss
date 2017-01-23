@@ -1,0 +1,81 @@
+.edit_album {
+  min-height: 318px;
+  padding-bottom: 25px;
+
+  &-header {
+    @media (max-width: 340px) {
+      padding: 18px 14px 18px 8px;
+      height: 68px;
+    }
+  }
+
+  &-close {
+    @media (max-width: 340px) {
+      top: 5px;
+      left: 0;
+    }
+  }
+
+  &__desc {
+    justify-content: flex-end;
+    margin-bottom: 18px;
+  }
+}
+
+.edit__upload-cover {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 582px;
+
+  @include tablet {
+    width: 482px;
+  }
+
+  @media (max-width: 550px) {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  &-btn {
+    color: #26bff9;
+    border: 1px solid #26bff9;
+    margin-right: 20px;
+
+    &:hover {
+      color: #fff;
+      background: #26bff9;
+    }
+  }
+
+  &-note {
+    width: 200px;
+    font-size: 14px;
+    line-height: 16px;
+    font-style: italic;
+    padding-top: 5px;
+
+    @media (max-width: 500px) {
+      margin-left: 75px;
+    }
+  }
+}
+
+.cover-small {
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+.cover-image {
+  width: 50px;
+  height: 50px;
+}
+
+.modal__desc_album {
+  margin-right: 28px;
+}
+.input-cover {
+  position: absolute;
+  left: -9999px;
+}

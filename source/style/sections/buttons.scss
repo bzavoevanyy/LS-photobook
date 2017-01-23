@@ -1,4 +1,4 @@
-.edit{
+.editprof{
   @include tablet {
 
   }
@@ -73,7 +73,7 @@
 
   }
 }
-.edit-wrap.edit{
+.edit-wrap.editprof{
   @include tablet {
 
   }
@@ -101,7 +101,10 @@
     right: 0;
   }
 }
-.edit-wrap.edit:hover{
+.edit-wrap.editprof:hover{
+  width: 120px;
+}
+.edit-wrap.edit-album:hover{
   width: 120px;
 }
 .edit-wrap.out:hover{

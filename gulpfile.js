@@ -20,10 +20,13 @@ global.$ = {
 $.path.task.forEach(function (taskPath) {
   require(taskPath)();
 });
-$.gulp.task('deploy', $.gulp.parallel(
+$.gulp.task('deploy', $.gulp.series(
+  'clean:public'
+,$.gulp.parallel(
+
   'copy:assets',
   'copy:pug'
-));
+)));
 $.gulp.task('default', $.gulp.series(
   'clean',
   $.gulp.parallel(

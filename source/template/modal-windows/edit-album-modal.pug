@@ -1,0 +1,28 @@
+.modal__window
+            .edit_album-header.modal__header
+                .modal__title Добавить альбом
+                svg.edit_album-close.modal__close
+                    use(xlink:href="assets/img/sprite.svg#close")
+            .edit_album.modal__main
+                input.albumid-hidden(type='text')
+                .edit__name
+                    .modal__desc.modal__desc_album Название
+                    textarea(rows=1 placeholder="Мой альбом" id='name_album').edit__name-textarea.edit__name-textarea_name
+                .edit__desc.edit_album__desc
+                    .modal__desc.modal__desc_edit-photo.modal__desc_album Описание
+                    textarea(id = 'desc_album' placeholder="Как я провёл лето. Чтобы было красиво описание должно быть на несколько строк. Убедитесь сами!").edit__name-textarea.edit__name-textarea_desc
+                .edit__upload-cover
+                    .cover-small
+                        img(src="#").cover-image
+                    label
+                        input(type='file' name='cover').input-cover
+                        .edit__upload-cover-btn.btn Загрузить обложку
+                    .edit__upload-cover-note (файл должен быть размером не более 1024 КБ)
+            .modal__footer
+                .modal__footer-left
+                    .btn.btn_save Сохранить
+                    .modal__cancel Отменить
+                .modal__footer-right
+                    .btn.btn_delete Удалить
+                        svg.btn-delete__image
+                            use(xlink:href="assets/img/sprite.svg#delete")

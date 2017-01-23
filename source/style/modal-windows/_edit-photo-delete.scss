@@ -1,0 +1,33 @@
+.edit-photo-delete {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 153px;
+
+  &__question {
+    font-weight: 500;
+    margin-top: -5px;
+    margin-bottom: 14px;
+  }
+
+  &__answer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__confirm {
+    color: #fff;
+    background: #ee4634;
+    margin-right: 18px;
+
+    &:hover {
+      background: #d94130;
+    }
+  }
+
+  &__cancel {
+    color: #6c6c6c;
+  }
+}

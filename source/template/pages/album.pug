@@ -6,29 +6,29 @@ block variables
 
 block content
  include ../commons/index/index_content
-    .wrapper
+    .wrapper.album-wrap
         include ../commons/edit_header_album
-        .header
+        .header(style="background:url('/photo/"+ albumCover +"');")
             .header__top
                 .content
                     .header-container
                         .user-block
                             div(class='user__avatar small')
                                 div(class='user__avatar-img small' style="background-image:url('/assets/img/photo.jpg');")
-                                    img.avatar-pic(src="/assets/img/photo.jpg" alt="")
+                                    img.avatar-pic(src=userPhoto alt="")
                             .user__inf
-                              .user__name Фамилия Имя
+                              .user__name #{userName}
                         .album
-                            .album__name Лесные прогулки
-                            .album__discription Фотографии природы леса,енотов,оленей.Как приятно сойти на дальней станции и пройтись по полю босиком.И чтобы никто не беспокоил, бродить не спеша, влюбленным в эту тишину. Запах елей, сосен будоражит
-                        .edit.album
+                            .album__name #{albumName}
+                            .album__discription #{albumDesc}
+                        .edit-album.album
                             .edit-wrap.home
                                 .svg-wrap
                                     svg(role="img" class="svg")
                                         use(xlink:href="/assets/img/sprite.svg#home")
-                                a(href='photo_main.html' class='hover-link')
+                                a(href='/home' class='hover-link')
                                     .edit-hover__text На главную
-                            .edit-wrap.edit
+                            .edit-wrap.editprof
                                 .svg-wrap
                                     svg(role="img" class="svg")
                                         use( xlink:href="/assets/img/sprite.svg#edit")
@@ -42,7 +42,7 @@ block content
                                     svg(role="img" class="svg")
                                         use( xlink:href="/assets/img/sprite.svg#cam")
                             .all__photo
-                                .photo__quant 1
+                                .photo__quant #{albumCounter}
                                 .all__photo-text Фотографий
                             .all__icons
                                 .svg-wrap
@@ -76,7 +76,7 @@ block content
                                     use(xlink:href="/assets/img/sprite.svg#home")
                             a(href='photo_main.html' class='hover-link')
                                     .edit-hover__text На главную
-        .main-content
+        .main-content(data-albumid = albumId)
             section.album-photo
                 .content
                     .noalbum
@@ -89,5 +89,6 @@ block content
                             a(href='#' class='hover-link')
                                 .edit-hover__text Добавить
                     .album-photo__container
-                        include ../commons/photo_list
+                        //include ../commons/photo_list
+        include  ../modal-windows/add-photo-empty
         include ../commons/footer

@@ -1,0 +1,6 @@
+.add-photo__add-field_added
+    each val in obj
+        .add-photo__photo(style="background-image: url('"+val.path+"')" data-filename=val.filename)
+            .add-photo__delete-btn
+                svg.add-photo__delete-cross
+                    use(xlink:href="/assets/img/sprite.svg#close")
